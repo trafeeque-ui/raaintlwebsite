@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="RAA International Solutions - Custom software development, dashboards, IT consulting, and digital transformation services.">
+    <meta name="keywords" content="software development, dashboards, IT consulting, digital transformation">
+    <meta name="author" content="RAA International Trading FZC LLC">
+    <title>Solutions - RAA International Trading</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* ══════════════════════════════════════════
+           SOLUTIONS PAGE — ADDITIONAL STYLES
+        ══════════════════════════════════════════ */
+
+        :root {
+            --gold: #C9A96E;
+            --gold-light: #e6d3a3;
+            --gold-dark: #9F7E4A;
+            --blue-deep: #003D82;
+            --blue-mid: #0052A3;
+            --blue-accent: #0066CC;
+            --off-white: #F8F9FB;
+            --text-dark: #1a1a2e;
+            --text-mid: #444;
+            --text-soft: #777;
+        }
+
+        /* ── HERO ── */
+        .sol-hero {
+            position: relative;
+            width: 100vw;
+            left: 50%;
+            margin-left: -50vw;
+            height: 540px;
+            overflow: hidden;
+            background: #000c1a;
+        }
+
+        .sol-hero-bg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 30%;
+            opacity: 0.55;
+            display: block;
+        }
+
+        .sol-hero-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            padding-left: 6%;
+        }
+
+        .sol-hero-content {
+            max-width: 620px;
+            color: #fff;
+        }
+
+        .sol-hero-eyebrow {
+            font-size: 0.72rem;
+            letter-spacing: 0.38em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .sol-hero-eyebrow::before {
+            content: '';
+            width: 40px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        .sol-hero-content h1 {
+            color: #fff;
+            font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+            font-weight: 800;
+            line-height: 1.15;
+            text-shadow: 0 3px 16px rgba(0, 0, 0, 0.55);
+            margin-bottom: 1rem;
+        }
+
+        .sol-hero-content h1 em {
+            font-style: italic;
+            color: var(--gold-light);
+        }
+
+        .sol-hero-content p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1.1rem;
+            text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .sol-hero::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 130px;
+            background: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.9) 80%, #fff 100%);
+            z-index: 5;
+            pointer-events: none;
+        }
+
+        /* ── SECTION WRAPPER ── */
+        .sol-section {
+            padding: 5rem 5%;
+        }
+
+        .sol-section.alt-bg {
+            background: var(--off-white);
+        }
+
+        .sol-section-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .section-eyebrow {
+            font-size: 0.72rem;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 0.8rem;
+        }
+
+        .section-eyebrow::before,
+        .section-eyebrow::after {
+            content: '';
+            width: 20px;
+            height: 1px;
+            background: var(--gold);
+            opacity: 0.7;
+        }
+
+        .sol-section-header h2 {
+            font-size: clamp(1.8rem, 3vw, 2.6rem);
+            color: var(--blue-deep);
+            margin-bottom: 0.8rem;
+        }
+
+        .sol-section-header p {
+            color: var(--text-soft);
+            font-size: 1rem;
+            max-width: 650px;
+            margin: 0 auto;
+            line-height: 1.75;
+        }
+
+        .section-divider {
+            width: 55px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--blue-accent), var(--gold));
+            border-radius: 2px;
+            margin: 1rem auto 0;
+        }
+
+        /* ── SERVICE CARDS ── */
+        .sol-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .sol-card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 2.2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border-top: 4px solid var(--blue-deep);
+            transition: all 0.3s ease;
+        }
+
+        .sol-card:nth-child(2) {
+            border-top-color: var(--blue-accent);
+        }
+
+        .sol-card:nth-child(3) {
+            border-top-color: var(--gold);
+        }
+
+        .sol-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 14px 34px rgba(0, 0, 0, 0.14);
+        }
+
+        .sol-card-icon {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .sol-card h3 {
+            color: var(--blue-deep);
+            font-size: 1.2rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .sol-card p {
+            color: var(--text-mid);
+            font-size: 0.94rem;
+            line-height: 1.75;
+            margin-bottom: 1.2rem;
+        }
+
+        .sol-card .cap-label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--blue-accent);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 0.8rem;
+        }
+
+        .sol-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sol-list li {
+            padding: 0.35rem 0 0.35rem 1.5rem;
+            position: relative;
+            font-size: 0.88rem;
+            color: var(--text-mid);
+        }
+
+        .sol-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--blue-accent);
+            font-weight: 700;
+        }
+
+        @media (max-width: 900px) {
+            .sol-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ── DASHBOARD FEATURE PANEL ── */
+        .dash-panel {
+            position: relative;
+            max-width: 1100px;
+            margin: 3.5rem auto 0;
+            padding: 3rem;
+            background: linear-gradient(160deg, #ffffff 0%, #f5f7fa 55%, #e9eef5 100%);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .dash-panel::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: url('images/dashboard.png');
+            background-repeat: no-repeat;
+            background-position: right -40px center;
+            background-size: 32%;
+            opacity: 0.08;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .dash-panel-inner {
+            position: relative;
+            z-index: 2;
+        }
+
+        .dash-panel h3 {
+            text-align: center;
+            color: var(--blue-deep);
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+        }
+
+        .dash-feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.8rem;
+        }
+
+        .dash-feature {
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 12px;
+            padding: 1.4rem;
+            border-left: 3px solid var(--gold);
+        }
+
+        .dash-feature h4 {
+            font-size: 0.95rem;
+            color: var(--blue-deep);
+            margin-bottom: 0.4rem;
+        }
+
+        .dash-feature p {
+            font-size: 0.85rem;
+            color: var(--text-soft);
+            line-height: 1.65;
+            margin: 0;
+        }
+
+        @media (max-width: 900px) {
+            .dash-feature-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .dash-feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .dash-panel {
+                padding: 2rem 1.4rem;
+            }
+        }
+
+        /* ── PROCESS STEPS ── */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.8rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .process-card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 2rem 1.8rem;
+            text-align: center;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .process-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .process-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--blue-deep), var(--blue-accent));
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .process-card h4 {
+            color: var(--blue-deep);
+            font-size: 1.02rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .process-card p {
+            color: var(--text-soft);
+            font-size: 0.88rem;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* ── WHY CHOOSE ── */
+        .why-section {
+            padding: 5rem 5%;
+            background: #fff;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.8rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .why-card {
+            background: var(--off-white);
+            border-radius: 14px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            transition: all 0.3s ease;
+            border-top: 3px solid transparent;
+        }
+
+        .why-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-top-color: var(--blue-accent);
+            background: #fff;
+        }
+
+        .why-icon {
+            font-size: 2rem;
+        }
+
+        .why-card h4 {
+            font-size: 1rem;
+            color: var(--blue-deep);
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .why-card p {
+            font-size: 0.88rem;
+            color: var(--text-soft);
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .why-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ── CTA BANNER ── */
+        .sol-cta {
+            background: linear-gradient(135deg, #003D82 0%, #0052A3 100%);
+            padding: 5rem 5%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sol-cta::before {
+            content: "";
+            position: absolute;
+            top: -80px;
+            right: -80px;
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(201, 169, 110, 0.14) 0%, transparent 65%);
+            pointer-events: none;
+        }
+
+        .sol-cta h2 {
+            color: #fff;
+            font-size: 2.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .sol-cta p {
+            color: rgba(255, 255, 255, 0.82);
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
+        }
+
+        /* ── SCROLL REVEAL ── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .sol-hero {
+                height: 420px;
+            }
+
+            .sol-hero-overlay {
+                padding: 0 5%;
+                justify-content: center;
+            }
+
+            .sol-hero-content {
+                text-align: center;
+            }
+
+            .sol-hero-eyebrow {
+                justify-content: center;
+            }
+
+            .hero-cta-group {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .sol-hero {
+                height: 380px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ==================== HEADER & NAVIGATION ==================== -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/RA_New.png" alt="RAA International" style="width: 30%; cursor: pointer;"
+                    title="RAA International Trading FZC LLC">
+                <span class="logo-text">RAA International FZC LLC</span>
+            </div>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="solutions.html" class="active">Solutions</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ==================== HERO ==================== -->
+    <div class="sol-hero">
+        <img src="images/Software_V9.png" alt="RAA International Digital Solutions" class="sol-hero-bg">
+        <div class="sol-hero-overlay">
+            <div class="sol-hero-content">
+                <div class="sol-hero-eyebrow">Digital Solutions &amp; Services</div>
+                <h1>Smart Software for <em>Smarter</em> Business</h1>
+                <p>Custom software development, advanced dashboards, and IT consulting built to support digital
+                    transformation and long-term growth.</p>
+                <div class="hero-cta-group">
+                    <a href="#development" class="cta-button">Software Development</a>
+                    <a href="#dashboards" class="cta-button cta-button-secondary">Dashboard Solutions</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== SOFTWARE DEVELOPMENT ==================== -->
+    <section class="sol-section" id="development">
+        <div class="sol-section-header reveal">
+            <span class="section-eyebrow">What We Build</span>
+            <h2>Software Development Services</h2>
+            <p>Customized software development designed to support digital transformation and improve operational
+                efficiency — built with a focus on scalability, security, and user-friendly design.</p>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="sol-grid">
+            <div class="sol-card reveal">
+                <div class="sol-card-icon">🎨</div>
+                <h3>Custom Design &amp; Development</h3>
+                <p>Tailored software solutions built from the ground up to match your specific business requirements
+                    and workflows.</p>
+                <ul class="sol-list">
+                    <li>Requirements analysis</li>
+                    <li>Architecture design</li>
+                    <li>Full development</li>
+                    <li>Quality assurance</li>
+                </ul>
+            </div>
+            <div class="sol-card reveal">
+                <div class="sol-card-icon">🌐</div>
+                <h3>Web Application Development</h3>
+                <p>Modern, responsive web applications using the latest technologies and best practices for optimal
+                    user experience.</p>
+                <ul class="sol-list">
+                    <li>Frontend development</li>
+                    <li>Backend services</li>
+                    <li>Database design</li>
+                    <li>Deployment support</li>
+                </ul>
+            </div>
+            <div class="sol-card reveal">
+                <div class="sol-card-icon">📱</div>
+                <h3>Mobile Application Development</h3>
+                <p>Cross-platform mobile apps designed for iOS, Android, and hybrid deployment with native
+                    performance.</p>
+                <ul class="sol-list">
+                    <li>Native development</li>
+                    <li>Hybrid solutions</li>
+                    <li>App store deployment</li>
+                    <li>Ongoing support</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== DASHBOARD SOLUTIONS ==================== -->
+    <section class="sol-section alt-bg" id="dashboards">
+        <div class="sol-section-header reveal">
+            <span class="section-eyebrow">Data &amp; Insight</span>
+            <h2>Dashboard &amp; Analytics Solutions</h2>
+            <p>Purpose-built dashboards that turn raw data into clear, actionable insight for every level of your
+                organization.</p>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="sol-grid">
+            <div class="sol-card reveal">
+                <div class="sol-card-icon">📊</div>
+                <h3>Custom Business Dashboards</h3>
+                <p>Purpose-built dashboards tailored to your business metrics and KPIs with real-time data
+                    visualization and reporting capabilities.</p>
+                <div class="cap-label">Features</div>
+                <ul class="sol-list">
+                    <li>Custom layouts &amp; widgets</li>
+                    <li>Real-time data feeds</li>
+                    <li>Interactive charts</li>
+                    <li>Export capabilities</li>
+                </ul>
+            </div>
+            <div class="sol-card reveal">
+                <div class="sol-card-icon">📈</div>
+                <h3>Operational Dashboards</h3>
+                <p>Comprehensive operational monitoring dashboards for tracking processes, resource utilization, and
+                    performance metrics across your organization.</p>
+                <div class="cap-label">Capabilities</div>
+                <ul class="sol-list">
+                    <li>Process monitoring</li>
+                    <li>Resource tracking</li>
+                    <li>Alert systems</li>
+                    <li>Historical analysis</li>
+                </ul>
+            </div>
+            <div class="sol-card reveal">
+                <div class="sol-card-icon">🎯</div>
+                <h3>Performance Dashboards</h3>
+                <p>Advanced dashboards for tracking organizational performance, efficiency metrics, and strategic
+                    objectives with drill-down analysis.</p>
+                <div class="cap-label">Components</div>
+                <ul class="sol-list">
+                    <li>KPI tracking</li>
+                    <li>Trend analysis</li>
+                    <li>Benchmarking</li>
+                    <li>Forecasting</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="dash-panel reveal">
+            <div class="dash-panel-inner">
+                <h3>Dashboard Components</h3>
+                <div class="dash-feature-grid">
+                    <div class="dash-feature">
+                        <h4>📊 KPI Tracking &amp; Reporting</h4>
+                        <p>Automated KPI tracking with customizable reporting, alerts, and performance benchmarking
+                            against targets.</p>
+                    </div>
+                    <div class="dash-feature">
+                        <h4>📉 Real-Time Data Visualization</h4>
+                        <p>Live data feeds with interactive visualizations, charts, graphs, and dynamic updates for
+                            immediate insights.</p>
+                    </div>
+                    <div class="dash-feature">
+                        <h4>🔄 Predictive Analytics</h4>
+                        <p>Advanced analytics with trend prediction, pattern recognition, and forecasting
+                            capabilities.</p>
+                    </div>
+                    <div class="dash-feature">
+                        <h4>🔐 Secure Access Control</h4>
+                        <p>Role-based access control, user authentication, and data security with audit trails.</p>
+                    </div>
+                    <div class="dash-feature">
+                        <h4>📤 Export &amp; Reporting</h4>
+                        <p>Scheduled reports, data export capabilities, and integration with business intelligence
+                            tools.</p>
+                    </div>
+                    <div class="dash-feature">
+                        <h4>🎨 Customization</h4>
+                        <p>Fully customizable layouts, themes, and branding to match your corporate identity.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== IT CONSULTING ==================== -->
+    <section class="sol-section" id="consulting">
+        <div class="sol-section-header reveal">
+            <span class="section-eyebrow">Strategic Guidance</span>
+            <h2>IT Consulting &amp; Support Services</h2>
+            <p>Practical, experienced guidance to align your technology investments with your business goals.</p>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="sol-grid">
+            <div class="sol-card reveal">
+                <div class="sol-card-icon">🔍</div>
+                <h3>IT Strategy Consulting</h3>
+                <p>Strategic technology planning and roadmap development to align IT initiatives with business
+                    objectives.</p>
+                <ul class="sol-list">
+                    <li>Technology assessment</li>
+                    <li>Gap analysis</li>
+                    <li>Roadmap development</li>
+                    <li>Implementation planning</li>
+                </ul>
+            </div>
+            <div class="sol-card reveal">
+                <div class="sol-card-icon">🚀</div>
+                <h3>Digital Transformation</h3>
+                <p>End-to-end digital transformation consulting to modernize operations and improve business
+                    processes.</p>
+                <ul class="sol-list">
+                    <li>Process automation</li>
+                    <li>Cloud migration</li>
+                    <li>Legacy system upgrades</li>
+                    <li>Change management</li>
+                </ul>
+            </div>
+            <div class="sol-card reveal">
+                <div class="sol-card-icon">🛡️</div>
+                <h3>IT Infrastructure Support</h3>
+                <p>Comprehensive IT infrastructure management, support, and optimization services for business
+                    continuity.</p>
+                <ul class="sol-list">
+                    <li>System maintenance</li>
+                    <li>Performance optimization</li>
+                    <li>Disaster recovery</li>
+                    <li>Technical support</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PROCESS & APPROACH ==================== -->
+    <section class="sol-section" id="process">
+        <div class="sol-section-header reveal">
+            <span class="section-eyebrow">How We Work</span>
+            <h2>Our Development Process</h2>
+            <p>A structured, transparent approach that keeps every project on time, on budget, and aligned with your
+                goals.</p>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="process-grid">
+            <div class="process-card reveal">
+                <div class="process-num">1</div>
+                <h4>Discovery &amp; Analysis</h4>
+                <p>We analyze your requirements, business processes, and goals to develop a comprehensive solution
+                    strategy.</p>
+            </div>
+            <div class="process-card reveal">
+                <div class="process-num">2</div>
+                <h4>Design &amp; Planning</h4>
+                <p>Create detailed designs, architecture, and project roadmaps with clear timelines and deliverables.
+                </p>
+            </div>
+            <div class="process-card reveal">
+                <div class="process-num">3</div>
+                <h4>Development</h4>
+                <p>Agile development with regular updates, quality assurance, and continuous integration practices.
+                </p>
+            </div>
+            <div class="process-card reveal">
+                <div class="process-num">4</div>
+                <h4>Testing &amp; QA</h4>
+                <p>Comprehensive testing including functional, performance, security, and user acceptance testing.
+                </p>
+            </div>
+            <div class="process-card reveal">
+                <div class="process-num">5</div>
+                <h4>Deployment</h4>
+                <p>Smooth deployment to production with training, documentation, and knowledge transfer.</p>
+            </div>
+            <div class="process-card reveal">
+                <div class="process-num">6</div>
+                <h4>Support &amp; Maintenance</h4>
+                <p>Ongoing support, maintenance, enhancements, and continuous optimization post-launch.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== WHY CHOOSE OUR SOLUTIONS ==================== -->
+    <section class="why-section">
+        <div class="sol-section-header reveal">
+            <span class="section-eyebrow">Our Promise</span>
+            <h2>Why Choose RAA Solutions?</h2>
+            <p>Every engagement is backed by our commitment to quality, security, and long-term partnership.</p>
+            <div class="section-divider"></div>
+        </div>
+        <div class="why-grid">
+            <div class="why-card reveal">
+                <div class="why-icon">📈</div>
+                <h4>Scalability Built-In</h4>
+                <p>Solutions designed to grow with your business without requiring complete rebuilds.</p>
+            </div>
+            <div class="why-card reveal">
+                <div class="why-icon">🔐</div>
+                <h4>Security First</h4>
+                <p>Enterprise-grade security with encryption, authentication, and compliance standards.</p>
+            </div>
+            <div class="why-card reveal">
+                <div class="why-icon">🎯</div>
+                <h4>User-Friendly Design</h4>
+                <p>Intuitive interfaces that require minimal training and maximize user adoption.</p>
+            </div>
+            <div class="why-card reveal">
+                <div class="why-icon">🔄</div>
+                <h4>Agile Methodology</h4>
+                <p>Flexible development approach with regular iterations and continuous improvements.</p>
+            </div>
+            <div class="why-card reveal">
+                <div class="why-icon">🤝</div>
+                <h4>Complete Support</h4>
+                <p>End-to-end support from planning through deployment and beyond.</p>
+            </div>
+            <div class="why-card reveal">
+                <div class="why-icon">💰</div>
+                <h4>Cost-Effective</h4>
+                <p>Transparent pricing with no hidden costs and maximum value for your investment.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CALL TO ACTION ==================== -->
+    <section class="sol-cta">
+        <h2>Let's Discuss Your Solution</h2>
+        <p>Contact our solutions team for a consultation and custom proposal for your business.</p>
+        <a href="contact.html" class="cta-button">Schedule Consultation</a>
+        <a href="about.html" class="cta-button cta-button-secondary">Learn More About Us</a>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>RAA International Trading FZC LLC</h4>
+                <p>Established in 2021 as a UAE-based trading company specializing in IT products, connectivity
+                    solutions, and premium accessories.</p>
+                <p style="margin-top: 1rem;"><strong>RAA Connect+</strong><br>Premium HDMI &amp; Connectivity
+                    Solutions</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a><br>
+                <a href="about.html">About Us</a><br>
+                <a href="products.html">Products</a><br>
+                <a href="solutions.html">Solutions</a><br>
+                <a href="contact.html">Contact Us</a><br>
+            </div>
+            <div class="footer-section">
+                <h4>Our Services</h4>
+                <a href="#development">Software Development</a><br>
+                <a href="#dashboards">Dashboard Solutions</a><br>
+                <a href="#consulting">IT Consulting</a><br>
+                <a href="products.html">IT Hardware</a><br>
+                <a href="products.html">Connectivity Products</a><br>
+            </div>
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <p>📧 Email: <a href="mailto:info@raaintl.com">info@raaintl.com</a></p>
+                <p>📱 WhatsApp: <a href="https://wa.me/971503212721">Chat with us</a></p>
+                <p>📍 Location: UAE</p>
+                <p style="margin-top: 1rem;"><strong>Hours:</strong><br>Sunday – Thursday<br>9:00 AM – 6:00 PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2021 – 2024 RAA International Trading FZC LLC. All rights reserved. | Privacy Policy | Terms of
+                Service</p>
+            <p style="margin-top: 0.8rem; font-size: 0.85rem;">Delivering Innovation in Technology and Design</p>
+        </div>
+    </footer>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script>
+        // ── Mobile Menu ──
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navLinksEl = document.getElementById('navLinks');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            navLinksEl.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => navLinksEl.classList.remove('active'));
+        });
+
+        // ── Active Link ──
+        function setActiveLink() {
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === currentPage) link.classList.add('active');
+            });
+        }
+        setActiveLink();
+
+        // ── Scroll Reveal ──
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.08, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    </script>
+
+</body>
+
+</html>

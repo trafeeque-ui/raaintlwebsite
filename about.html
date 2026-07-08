@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="About RAA International Trading FZC LLC - Learn about our mission, vision, business divisions, and commitment to excellence.">
+    <meta name="keywords" content="RAA International, company overview, mission, vision, IT solutions UAE">
+    <meta name="author" content="RAA International Trading FZC LLC">
+    <title>About Us - RAA International Trading</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* ===== ABOUT PAGE SPECIFIC STYLES ===== */
+
+        /* ── HERO ── */
+        .about-hero {
+            position: relative;
+            width: 100vw;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            height: 520px;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .about-hero-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            opacity: 0.72;
+            display: block;
+        }
+
+        .about-hero-overlay {
+            position: absolute;
+            inset: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 6%;
+        }
+
+        .about-hero-content {
+            max-width: 560px;
+            text-align: right;
+            color: #fff;
+        }
+
+        .about-hero-eyebrow {
+            font-size: 0.72rem;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: #C9A96E;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .about-hero-content h1 {
+            color: #fff;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            line-height: 1.2;
+            text-shadow: 0 3px 12px rgba(0, 0, 0, 0.5);
+            margin-bottom: 1rem;
+        }
+
+        .about-hero-content p {
+            color: rgba(255, 255, 255, 0.88);
+            font-size: 1.1rem;
+            text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+            margin-bottom: 0;
+        }
+
+        .about-hero::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 120px;
+            background: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.85) 80%, #fff 100%);
+            z-index: 5;
+            pointer-events: none;
+        }
+
+        /* ── COMPANY OVERVIEW — SPLIT LAYOUT ── */
+        .overview-section {
+            padding: 5rem 5%;
+            background: #ffffff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .overview-section::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 48%;
+            height: 100%;
+            background: url("images/About Us.png") no-repeat center / cover;
+            opacity: 0.82;
+            mask-image: linear-gradient(to left, black 60%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to left, black 60%, transparent 100%);
+        }
+
+        .overview-inner {
+            position: relative;
+            z-index: 2;
+            max-width: 1300px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .overview-left .mini-line {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 1.2rem;
+        }
+
+        .overview-left .mini-line .line {
+            width: 55px;
+            height: 2px;
+            background: linear-gradient(to right, #C9A96E, #e6d3a3);
+        }
+
+        .overview-left .mini-line .label {
+            font-size: 0.78rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: #C9A96E;
+            font-weight: 600;
+        }
+
+        .overview-left h2 {
+            font-size: clamp(2rem, 3.5vw, 3rem);
+            font-weight: 800;
+            color: #003D82;
+            line-height: 1.2;
+            margin-bottom: 0.3rem;
+        }
+
+        .overview-left h2 span {
+            color: #C9A96E;
+            font-weight: 300;
+        }
+
+        .overview-badge {
+            display: inline-block;
+            background: rgba(0, 61, 130, 0.08);
+            border: 1px solid rgba(0, 61, 130, 0.2);
+            color: #003D82;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 0.35rem 1rem;
+            border-radius: 30px;
+            margin-bottom: 1.8rem;
+        }
+
+        .overview-text {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.85;
+            margin-bottom: 1.2rem;
+        }
+
+        .overview-text strong {
+            color: #003D82;
+        }
+
+        .overview-principles {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-top: 1.8rem;
+        }
+
+        .principle-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .principle-dot {
+            width: 8px;
+            height: 8px;
+            background: #C9A96E;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .principle-row span {
+            font-size: 0.92rem;
+            color: #444;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .overview-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .overview-section::after {
+                display: none;
+            }
+
+            .about-hero {
+                height: 420px;
+            }
+
+            .about-hero-overlay {
+                justify-content: center;
+                padding: 0 5%;
+            }
+
+            .about-hero-content {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .about-hero {
+                height: 380px;
+            }
+
+            .about-stats {
+                gap: 2rem;
+            }
+        }
+
+        /* ── MISSION & VISION ── */
+        .mv-section {
+            padding: 5rem 5%;
+            background: #F5F7FA;
+        }
+
+        .mv-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .mv-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .mv-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+        }
+
+        .mv-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #003D82, #0066CC);
+        }
+
+        .mv-card.gold::before {
+            background: linear-gradient(90deg, #C9A96E, #e6d3a3);
+        }
+
+        .mv-emoji {
+            font-size: 2.6rem;
+            margin-bottom: 1.2rem;
+            display: block;
+        }
+
+        .mv-card h3 {
+            font-size: 1.5rem;
+            color: #003D82;
+            margin-bottom: 0.8rem;
+        }
+
+        .mv-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 640px) {
+            .mv-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ── BUSINESS DIVISIONS ── */
+        .divisions-section {
+            padding: 5rem 5%;
+            background: #fff;
+        }
+
+        .divisions-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .division-card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 2.2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid #003D82;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .division-card:nth-child(2) {
+            border-left-color: #0066CC;
+        }
+
+        .division-card:nth-child(3) {
+            border-left-color: #C9A96E;
+        }
+
+        .division-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 32px rgba(0, 0, 0, 0.14);
+        }
+
+        .division-icon {
+            font-size: 2.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .division-card h3 {
+            color: #003D82;
+            font-size: 1.25rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .division-subtitle {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: #0066CC;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 1rem;
+        }
+
+        .division-card:nth-child(3) .division-subtitle {
+            color: #C9A96E;
+        }
+
+        .division-card p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.75;
+            margin-bottom: 1.2rem;
+        }
+
+        .division-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .division-list li {
+            padding: 0.35rem 0 0.35rem 1.4rem;
+            position: relative;
+            font-size: 0.88rem;
+            color: #555;
+        }
+
+        .division-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #0066CC;
+            font-weight: 700;
+        }
+
+        .division-card:nth-child(3) .division-list li::before {
+            color: #C9A96E;
+        }
+
+        @media (max-width: 900px) {
+            .divisions-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ── WHO WE SERVE ── */
+        .serve-section {
+            padding: 5rem 5%;
+            background: #F5F7FA;
+        }
+
+        .serve-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .serve-item {
+            background: #fff;
+            border-radius: 12px;
+            padding: 1.8rem;
+            border-left: 4px solid #003D82;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+        }
+
+        .serve-item:hover {
+            transform: translateX(6px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .serve-item h4 {
+            font-size: 1rem;
+            color: #003D82;
+            margin-bottom: 0.5rem;
+        }
+
+        .serve-item p {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 768px) {
+            .serve-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .serve-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ── WHY CHOOSE US ── */
+        /* reuse .wcu from styles.css */
+
+        /* ── CORE VALUES ── */
+        .values-section {
+            padding: 5rem 5%;
+            background: #fff;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .value-card {
+            background: #F5F7FA;
+            border-radius: 12px;
+            padding: 1.8rem 1.8rem 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            border-top: 3px solid transparent;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            border-top-color: #003D82;
+        }
+
+        .value-card .v-icon {
+            font-size: 2.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .value-card h4 {
+            font-size: 1rem;
+            color: #003D82;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .value-card p {
+            font-size: 0.88rem;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 768px) {
+            .values-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ── SECTION TITLE overrides (centering) ── */
+        .section-title p {
+            color: #666;
+            font-size: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* ── CTA BANNER ── */
+        .about-cta {
+            background: linear-gradient(135deg, #003D82 0%, #0052A3 100%);
+            padding: 4rem 5%;
+            text-align: center;
+        }
+
+        .about-cta h2 {
+            color: #fff;
+            font-size: 2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .about-cta p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
+        }
+
+        /* ── STATS STRIP inside about ── */
+        .about-stats {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+            padding: 3rem 5%;
+            background: #003D82;
+        }
+
+        .astat {
+            text-align: center;
+            color: #fff;
+        }
+
+        .astat-num {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #C9A96E;
+            line-height: 1;
+        }
+
+        .astat-label {
+            font-size: 0.82rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 0.4rem;
+        }
+
+        /* ── ENTRANCE ANIMATIONS ── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ==================== HEADER & NAVIGATION ==================== -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/RA_New.png" alt="RAA International" style="width: 30%; cursor: pointer;"
+                    title="RAA International Trading FZC LLC">
+                <span class="logo-text">RAA International FZC LLC</span>
+            </div>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="solutions.html">Solutions</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ==================== HERO ==================== -->
+    <div class="about-hero">
+        <img src="images/About_Us_V10.png" alt="About RAA International" class="about-hero-img">
+        <div class="about-hero-overlay">
+            <div class="about-hero-content">
+                <span class="about-hero-eyebrow">About RAA International</span>
+                <h1>Driving Innovation<br>Delivering Trust</h1>
+                <p>A Technology Partner Focused on Reliability,<br>Performance &amp; Long-Term Success</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== COMPANY OVERVIEW ==================== -->
+    <section class="overview-section">
+        <div class="overview-inner">
+            <div class="overview-left reveal">
+                <div class="mini-line">
+                    <span class="line"></span>
+                    <span class="label">Who We Are</span>
+                </div>
+                <h2>Built on Trust,<br><span>Driven by Excellence</span></h2>
+                <span class="overview-badge">📍 UAE-Based · Est. 2021</span>
+
+                <p class="overview-text">
+                    <strong>RAA International Trading FZC LLC</strong> is a UAE-based trading company established
+                    in 2021, operating across technology and consumer product segments. We are driven by a
+                    commitment to quality, reliability, and long-term partnerships with our clients.
+                </p>
+                <p class="overview-text">
+                    Our business is built on three core principles: responsible sourcing, technical understanding,
+                    and a customer-centric approach. We serve SMEs, corporate clients, IT system integrators,
+                    retailers, and individual customers across the UAE with practical, reliable, and cost-effective
+                    solutions.
+                </p>
+
+                <div class="overview-principles">
+                    <div class="principle-row">
+                        <span class="principle-dot"></span>
+                        <span>Responsible Sourcing from verified global manufacturers</span>
+                    </div>
+                    <div class="principle-row">
+                        <span class="principle-dot"></span>
+                        <span>Deep Technical Understanding of IT & connectivity products</span>
+                    </div>
+                    <div class="principle-row">
+                        <span class="principle-dot"></span>
+                        <span>Customer-Centric Approach tailored to every business need</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right side is the pseudo-element background image -->
+            <div></div>
+        </div>
+    </section>
+
+    <!-- ==================== STATS STRIP ==================== -->
+    <div class="about-stats">
+        <div class="astat reveal">
+            <div class="astat-num">2021</div>
+            <div class="astat-label">Year Established</div>
+        </div>
+        <div class="astat reveal">
+            <div class="astat-num">3+</div>
+            <div class="astat-label">Business Divisions</div>
+        </div>
+        <div class="astat reveal">
+            <div class="astat-num">19+</div>
+            <div class="astat-label">Global Brands</div>
+        </div>
+        <div class="astat reveal">
+            <div class="astat-num">UAE</div>
+            <div class="astat-label">Based &amp; Operated</div>
+        </div>
+    </div>
+
+    <!-- ==================== MISSION & VISION ==================== -->
+    <section class="mv-section">
+        <div class="section-title reveal">
+            <h2>Our Mission &amp; Vision</h2>
+            <p>The principles that guide every product we deliver and every partnership we build.</p>
+        </div>
+        <div class="mv-grid">
+            <div class="mv-card reveal">
+                <span class="mv-emoji">🎯</span>
+                <h3>Our Mission</h3>
+                <p>To deliver reliable IT products, high-performance connectivity solutions, and premium accessories
+                    that support modern work lifestyles, enhance digital experiences, and drive sustainable business
+                    growth.</p>
+            </div>
+            <div class="mv-card gold reveal">
+                <span class="mv-emoji">🌟</span>
+                <h3>Our Vision</h3>
+                <p>To establish RAA Connect+ as a trusted connectivity brand and RAA International Trading FZC LLC
+                    as a reliable provider of technology and lifestyle solutions across the Middle East and beyond.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CORE VALUES ==================== -->
+    <section class="values-section">
+        <div class="section-title reveal">
+            <h2>Our Core Values</h2>
+            <p>The foundation of everything we do — from the products we source to the partnerships we build.</p>
+        </div>
+        <div class="values-grid">
+            <div class="value-card reveal">
+                <div class="v-icon">🏆</div>
+                <h4>Quality First</h4>
+                <p>Committed to delivering only genuine, high-quality products that meet international standards.</p>
+            </div>
+            <div class="value-card reveal">
+                <div class="v-icon">❤️</div>
+                <h4>Customer Focus</h4>
+                <p>Every decision driven by understanding and meeting customer needs with tailored solutions.</p>
+            </div>
+            <div class="value-card reveal">
+                <div class="v-icon">🔒</div>
+                <h4>Reliability</h4>
+                <p>Dependable supply, consistent service, and support you can count on every time.</p>
+            </div>
+            <div class="value-card reveal">
+                <div class="v-icon">💡</div>
+                <h4>Innovation</h4>
+                <p>Continuously exploring new technologies and solutions to stay ahead in the market.</p>
+            </div>
+            <div class="value-card reveal">
+                <div class="v-icon">⚖️</div>
+                <h4>Integrity</h4>
+                <p>Honest business practices, transparent communication, and ethical operations always.</p>
+            </div>
+            <div class="value-card reveal">
+                <div class="v-icon">🚀</div>
+                <h4>Growth Partnership</h4>
+                <p>Invested in long-term success of our customers and partners through collaborative growth.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== BUSINESS DIVISIONS ==================== -->
+    <section class="divisions-section">
+        <div class="section-title reveal">
+            <h2>Business Divisions</h2>
+            <p>Three focused verticals working together to serve your technology and lifestyle needs.</p>
+        </div>
+        <div class="divisions-grid">
+            <div class="division-card reveal">
+                <div class="division-icon">🔌</div>
+                <h3>RAA Connect+</h3>
+                <div class="division-subtitle">Connectivity &amp; IT Products</div>
+                <p>Our flagship brand dedicated to premium HDMI and connectivity solutions. We develop and supply
+                    HDMI 2.1 cables engineered for high-resolution audio and video applications.</p>
+                <ul class="division-list">
+                    <li>HDMI 2.1 Compliant</li>
+                    <li>8K Ultra HD Support</li>
+                    <li>48Gbps Ultra-High Speed</li>
+                    <li>Professional &amp; Home Use</li>
+                </ul>
+            </div>
+
+            <div class="division-card reveal">
+                <div class="division-icon">💻</div>
+                <h3>Technology Solutions</h3>
+                <div class="division-subtitle">IT Hardware &amp; Software Development</div>
+                <p>Comprehensive supply of IT products and custom software development services supporting digital
+                    transformation for businesses of all sizes.</p>
+                <ul class="division-list">
+                    <li>IT Hardware &amp; Components</li>
+                    <li>Software Solutions</li>
+                    <li>Custom Development</li>
+                    <li>Consulting Services</li>
+                </ul>
+            </div>
+
+            <div class="division-card reveal">
+                <div class="division-icon">👜</div>
+                <h3>Lifestyle Products</h3>
+                <div class="division-subtitle">Premium Leather Goods &amp; Accessories</div>
+                <p>Diversified selection of premium leather goods designed for modern work lifestyles, combining
+                    durability and contemporary design aesthetics.</p>
+                <ul class="division-list">
+                    <li>Laptop Bags</li>
+                    <li>Wallets &amp; Belts</li>
+                    <li>Designer Accessories</li>
+                    <li>Premium Materials</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== WHO WE SERVE ==================== -->
+    <section class="serve-section">
+        <div class="section-title reveal">
+            <h2>Who We Serve</h2>
+            <p>From individual customers to enterprise clients — we have a solution for every need.</p>
+        </div>
+        <div class="serve-grid">
+            <div class="serve-item reveal">
+                <h4>🏢 Small &amp; Medium Enterprises (SMEs)</h4>
+                <p>Tailored solutions to support business growth and operational efficiency.</p>
+            </div>
+            <div class="serve-item reveal">
+                <h4>🏛️ Corporate Clients</h4>
+                <p>Enterprise-level products and services with dedicated support and custom solutions.</p>
+            </div>
+            <div class="serve-item reveal">
+                <h4>⚙️ IT System Integrators</h4>
+                <p>Comprehensive product range and technical support for system integration projects.</p>
+            </div>
+            <div class="serve-item reveal">
+                <h4>🛍️ Retailers &amp; Resellers</h4>
+                <p>Competitive pricing and reliable supply for retail distribution channels.</p>
+            </div>
+            <div class="serve-item reveal">
+                <h4>👤 Individual Customers</h4>
+                <p>Quality products and friendly service for personal technology needs.</p>
+            </div>
+            <div class="serve-item reveal">
+                <h4>🌐 Wholesale Partners</h4>
+                <p>Bulk ordering capabilities and partnership opportunities for growth.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- ==================== CALL TO ACTION ==================== -->
+    <section class="about-cta">
+        <h2>Join Our Growing Partner Network</h2>
+        <p>Experience the RAA International difference in IT solutions, connectivity, and customer service.</p>
+        <a href="contact.html" class="cta-button">Contact Our Team</a>
+        <a href="products.html" class="cta-button cta-button-secondary">Explore Our Products</a>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>RAA International Trading FZC LLC</h4>
+                <p>Established in 2021 as a UAE-based trading company specializing in IT products, connectivity
+                    solutions, and premium accessories.</p>
+                <p style="margin-top: 1rem;"><strong>RAA Connect+</strong><br>Premium HDMI &amp; Connectivity Solutions
+                </p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a><br>
+                <a href="about.html">About Us</a><br>
+                <a href="products.html">Products</a><br>
+                <a href="solutions.html">Solutions</a><br>
+                <a href="contact.html">Contact Us</a><br>
+            </div>
+            <div class="footer-section">
+                <h4>Our Services</h4>
+                <a href="products.html">IT Hardware</a><br>
+                <a href="products.html">Software Solutions</a><br>
+                <a href="solutions.html">Custom Development</a><br>
+                <a href="solutions.html">Dashboard Solutions</a><br>
+                <a href="products.html">Connectivity Products</a><br>
+            </div>
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <p>📧 Email: <a href="mailto:info@raaintl.com">info@raaintl.com</a></p>
+                <p>📱 WhatsApp: <a href="https://wa.me/971503212721">Chat with us</a></p>
+                <p>📍 Location: UAE</p>
+                <p style="margin-top: 1rem;"><strong>Hours:</strong><br>Sunday – Thursday<br>9:00 AM – 6:00 PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2021 – 2024 RAA International Trading FZC LLC. All rights reserved. | Privacy Policy | Terms of Service
+            </p>
+            <p style="margin-top: 0.8rem; font-size: 0.85rem;">Delivering Innovation in Technology and Design</p>
+        </div>
+    </footer>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script>
+        // Mobile Menu
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Active link
+        function setActiveLink() {
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+        }
+        setActiveLink();
+
+        // Scroll Reveal
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, i) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, 80);
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        // Staggered reveals for grids
+        const staggerObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const siblings = entry.target.parentElement.querySelectorAll('.reveal');
+                    siblings.forEach((el, i) => {
+                        setTimeout(() => el.classList.add('visible'), i * 120);
+                    });
+                    staggerObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.05 });
+
+        document.querySelectorAll('.mv-grid .reveal:first-child, .divisions-grid .reveal:first-child, .serve-grid .reveal:first-child, .values-grid .reveal:first-child')
+            .forEach(el => staggerObserver.observe(el));
+    </script>
+
+</body>
+
+</html>

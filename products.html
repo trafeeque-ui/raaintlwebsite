@@ -1,0 +1,1767 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="RAA International Products - IT Hardware, Software Solutions, RAA Connect+ HDMI cables, and premium leather accessories.">
+    <meta name="keywords" content="IT hardware, software, HDMI cables, leather bags, accessories, UAE technology">
+    <meta name="author" content="RAA International Trading FZC LLC">
+    <title>Products - RAA International Trading</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* ══════════════════════════════════════════
+           PRODUCTS PAGE — ADDITIONAL STYLES
+        ══════════════════════════════════════════ */
+
+        :root {
+            --gold: #C9A96E;
+            --gold-light: #e6d3a3;
+            --gold-dark: #9F7E4A;
+            --blue-deep: #003D82;
+            --blue-mid: #0052A3;
+            --blue-accent: #0066CC;
+            --off-white: #F8F9FB;
+            --text-dark: #1a1a2e;
+            --text-mid: #444;
+            --text-soft: #777;
+        }
+
+        /* ── HERO ── */
+        .prod-hero {
+            position: relative;
+            width: 100vw;
+            left: 50%;
+            margin-left: -50vw;
+            height: 540px;
+            overflow: hidden;
+            background: #000c1a;
+        }
+
+        .prod-hero-bg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 30%;
+            opacity: 0.55;
+            display: block;
+        }
+
+        .prod-hero-overlay {
+            position: absolute;
+            inset: 0;
+
+            display: flex;
+            align-items: center;
+            padding-left: 6%;
+        }
+
+        .prod-hero-content {
+            max-width: 620px;
+            color: #fff;
+        }
+
+        .prod-hero-eyebrow {
+            font-size: 0.72rem;
+            letter-spacing: 0.38em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .prod-hero-eyebrow::before {
+            content: '';
+            width: 40px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        .prod-hero-content h1 {
+            color: #fff;
+            font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+            font-weight: 800;
+            line-height: 1.15;
+            text-shadow: 0 3px 16px rgba(0, 0, 0, 0.55);
+            margin-bottom: 1rem;
+        }
+
+        .prod-hero-content h1 em {
+            font-style: italic;
+            color: var(--gold-light);
+        }
+
+        .prod-hero-content p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1.1rem;
+            text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .prod-hero::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 130px;
+            background: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.9) 80%, #fff 100%);
+            z-index: 5;
+            pointer-events: none;
+        }
+
+        /* ── TAB NAVIGATION ── */
+        .tab-nav-wrap {
+            position: sticky;
+            top: 58px;
+            z-index: 90;
+            background: #fff;
+            border-bottom: 1px solid #e8edf5;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        .tab-nav {
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            max-width: 1000px;
+            margin: 0 auto;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+
+        .tab-nav::-webkit-scrollbar {
+            display: none;
+        }
+
+        .tab-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 1rem 2rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-soft);
+            background: none;
+            border: none;
+            border-bottom: 3px solid transparent;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+            letter-spacing: 0.02em;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .tab-btn:hover {
+            color: var(--blue-deep);
+            background: rgba(0, 61, 130, 0.03);
+        }
+
+        .tab-btn.active {
+            color: var(--blue-deep);
+            border-bottom-color: var(--blue-accent);
+        }
+
+        .tab-btn .tab-icon {
+            font-size: 1.1rem;
+        }
+
+        /* ── SECTION WRAPPER ── */
+        .prod-section {
+            padding: 5rem 5%;
+        }
+
+        .prod-section.alt-bg {
+            background: var(--off-white);
+        }
+
+        /* ── SECTION HEADER ── */
+        .prod-section-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .section-eyebrow {
+            font-size: 0.72rem;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 0.8rem;
+        }
+
+        .section-eyebrow::before,
+        .section-eyebrow::after {
+            content: '';
+            width: 20px;
+            height: 1px;
+            background: var(--gold);
+            opacity: 0.7;
+        }
+
+        .prod-section-header h2 {
+            font-size: clamp(1.8rem, 3vw, 2.6rem);
+            color: var(--blue-deep);
+            margin-bottom: 0.8rem;
+        }
+
+        .prod-section-header p {
+            color: var(--text-soft);
+            font-size: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.75;
+        }
+
+        .section-divider {
+            width: 55px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--blue-accent), var(--gold));
+            border-radius: 2px;
+            margin: 1rem auto 0;
+        }
+
+        /* ══════════════════════════════════
+           1. RAA CONNECT+ — HDMI SECTION
+        ══════════════════════════════════ */
+        .hdmi-section {
+            /* background: linear-gradient(160deg, #000c1a 0%, #002055 55%, #003D82 100%); */
+            background: linear-gradient(160deg, #ffffff 0%, #f5f7fa 55%, #e9eef5 100%);
+            padding: 6rem 5%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hdmi-section::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            background-image: url('images/HDMI1.jpeg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 42%;
+
+            opacity: 0.08;
+
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .hdmi-section::after {
+            content: "";
+            position: absolute;
+            bottom: -80px;
+            left: -80px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(0, 102, 204, 0.2) 0%, transparent 65%);
+            pointer-events: none;
+        }
+
+        .hdmi-inner {
+            position: relative;
+            z-index: 2;
+            max-width: 1300px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        /* Brand badge */
+        .hdmi-brand-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            /* background: rgba(201, 169, 110, 0.15);
+            border: 1px solid rgba(201, 169, 110, 0.35); */
+            background: rgba(0, 61, 130, 0.06);
+            border: 1px solid rgba(0, 61, 130, 0.15);
+            padding: 0.45rem 1.2rem;
+            border-radius: 30px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hdmi-brand-badge span {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            /* color: var(--gold); */
+            color: #003D82;
+        }
+
+
+        .hdmi-brand-badge .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            /* background: var(--gold); */
+            background: #003D82;
+            animation: pulse-dot 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-dot {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.5;
+                transform: scale(0.7);
+            }
+        }
+
+        .hdmi-left h2 {
+            font-size: clamp(2rem, 3.5vw, 3rem);
+            font-weight: 800;
+            /* color: #fff; */
+            color: #0f172a;
+            line-height: 1.2;
+
+            margin-bottom: 0.5rem;
+        }
+
+        .hdmi-left h2 em {
+            font-style: italic;
+            /* color: var(--gold-light); */
+            color: #003D82;
+        }
+
+        .hdmi-tagline {
+            font-size: 1rem;
+            /* color: rgba(255, 255, 255, 0.65); */
+            color: #475569;
+            margin-bottom: 2rem;
+            letter-spacing: 0.04em;
+        }
+
+        .hdmi-desc {
+            /* color: rgba(255, 255, 255, 0.82); */
+            color: #334155;
+            font-size: 0.97rem;
+            line-height: 1.85;
+            margin-bottom: 2.5rem;
+        }
+
+        /* Spec pills */
+        .spec-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .spec-pill {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 0.45rem 1rem;
+            border-radius: 30px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            /* background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            color: #fff; */
+            background: rgba(0, 61, 130, 0.05);
+            border: 1px solid rgba(0, 61, 130, 0.12);
+            color: #003D82;
+            transition: 0.3s;
+        }
+
+        .spec-pill:hover {
+            /* background: rgba(201, 169, 110, 0.2);
+            border-color: rgba(201, 169, 110, 0.5); */
+            background: rgba(0, 61, 130, 0.10);
+            border-color: rgba(0, 61, 130, 0.25);
+        }
+
+        .spec-pill .sp-icon {
+            font-size: 1rem;
+        }
+
+        /* Feature list */
+        .hdmi-features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+        }
+
+        .hdmi-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            /* color: rgba(255, 255, 255, 0.85); */
+            color: #334155;
+            font-size: 0.93rem;
+            line-height: 1.6;
+        }
+
+        .hdmi-features li .fi-check {
+            flex-shrink: 0;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: rgba(201, 169, 110, 0.25);
+            border: 1px solid rgba(201, 169, 110, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.65rem;
+            color: var(--gold);
+            margin-top: 2px;
+        }
+
+        .hdmi-features li strong {
+            /* color: #fff; */
+            color: #0f172a;
+        }
+
+        /* Right — visual card */
+        .hdmi-right {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .hdmi-visual-card {
+            /* background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12); */
+            background: rgba(255, 255, 255, 0.75);
+            border: 1px solid rgba(15, 23, 42, 0.08);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+            border-radius: 18px;
+            padding: 2rem;
+            backdrop-filter: blur(8px);
+        }
+
+        .hdmi-visual-card h4 {
+            /* color: var(--gold); */
+            color: #003D82;
+            font-size: 0.78rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .hdmi-visual-card h4::after {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 1px;
+            background: var(--gold);
+            margin-top: 6px;
+            opacity: 0.5;
+        }
+
+        /* Applications grid */
+        .apps-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .app-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            /* color: rgba(255, 255, 255, 0.8); */
+            font-size: 0.88rem;
+            color: #334155;
+        }
+
+        .app-item .app-icon {
+            font-size: 1.3rem;
+        }
+
+        /* Spec table */
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .spec-table tr {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .spec-table tr:last-child {
+            border-bottom: none;
+        }
+
+        .spec-table td {
+            padding: 0.65rem 0;
+            font-size: 0.88rem;
+        }
+
+        .spec-table td:first-child {
+            /* color: rgba(255, 255, 255, 0.5); */
+            color: #64748b;
+            font-size: 0.78rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            width: 45%;
+        }
+
+        .spec-table td:last-child {
+            /* color: #fff; */
+            color: #0f172a;
+            font-weight: 600;
+        }
+
+        @media (max-width: 900px) {
+            .hdmi-inner {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+
+        /* ══════════════════════════════════
+           2. IT HARDWARE SECTION
+        ══════════════════════════════════ */
+        .hw-categories {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hw-cat-block {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+            transition: box-shadow 0.3s;
+        }
+
+        .hw-cat-block:hover {
+            box-shadow: 0 8px 36px rgba(0, 0, 0, 0.12);
+        }
+
+        .hw-cat-header {
+            background: linear-gradient(135deg, var(--blue-deep) 0%, var(--blue-mid) 100%);
+            padding: 1.4rem 2rem;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .hw-cat-header .cat-icon {
+            font-size: 1.6rem;
+        }
+
+        .hw-cat-header h3 {
+            color: #fff;
+            font-size: 1.15rem;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .hw-cat-header .cat-count {
+            margin-left: auto;
+            background: rgba(255, 255, 255, 0.18);
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            letter-spacing: 0.05em;
+        }
+
+        .hw-product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1px;
+            background: #e8edf5;
+        }
+
+        .hw-product-cell {
+            background: #fff;
+            padding: 1.3rem 1.5rem;
+            transition: background 0.25s;
+            cursor: default;
+        }
+
+        .hw-product-cell:hover {
+            background: #f0f5ff;
+        }
+
+        .hw-product-cell .pc-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hw-product-cell strong {
+            display: block;
+            font-size: 0.9rem;
+            color: var(--blue-deep);
+            margin-bottom: 0.25rem;
+            font-weight: 700;
+        }
+
+        .hw-product-cell p {
+            font-size: 0.8rem;
+            color: var(--text-soft);
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* ── Software section uses same hw structure with gold accent ── */
+        .sw-cat-header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #003D82 100%);
+        }
+
+        /* ══════════════════════════════════
+           3. LIFESTYLE / LEATHER SECTION
+        ══════════════════════════════════ */
+        .lifestyle-section {
+            padding: 6rem 5%;
+            background: linear-gradient(160deg, #fdf9f3 0%, #fff 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .lifestyle-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 35%;
+            height: 100%;
+            background: linear-gradient(to left, rgba(201, 169, 110, 0.06) 0%, transparent 100%);
+            pointer-events: none;
+        }
+
+        .lifestyle-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .lifestyle-card {
+            background: #fff;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.35s ease;
+            position: relative;
+        }
+
+        .lifestyle-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.14);
+        }
+
+        .lifestyle-card-top {
+            height: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4.5rem;
+            background: linear-gradient(135deg, #f5f0e8 0%, #ede4d0 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .lifestyle-card-top::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 40px;
+            background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.6));
+        }
+
+        .lifestyle-card-body {
+            padding: 1.6rem 1.8rem 2rem;
+        }
+
+        .lifestyle-card h3 {
+            font-size: 1.15rem;
+            color: var(--blue-deep);
+            margin-bottom: 0.5rem;
+        }
+
+        .lifestyle-card p {
+            font-size: 0.88rem;
+            color: var(--text-soft);
+            line-height: 1.7;
+            margin-bottom: 1.2rem;
+        }
+
+        .ls-tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            background: rgba(201, 169, 110, 0.12);
+            color: var(--gold-dark);
+            border: 1px solid rgba(201, 169, 110, 0.3);
+            margin-right: 0.4rem;
+            margin-bottom: 0.4rem;
+        }
+
+        @media (max-width: 900px) {
+            .lifestyle-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .lifestyle-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ══════════════════════════════════
+           4. WHY CHOOSE RAA PRODUCTS
+        ══════════════════════════════════ */
+        .why-section {
+            padding: 5rem 5%;
+            background: #fff;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.8rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .why-card {
+            background: var(--off-white);
+            border-radius: 14px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            transition: all 0.3s ease;
+            border-top: 3px solid transparent;
+        }
+
+        .why-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-top-color: var(--blue-accent);
+            background: #fff;
+        }
+
+        .why-icon {
+            font-size: 2rem;
+        }
+
+        .why-card h4 {
+            font-size: 1rem;
+            color: var(--blue-deep);
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .why-card p {
+            font-size: 0.88rem;
+            color: var(--text-soft);
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .why-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ══════════════════════════════════
+           BRAND STRIP (logo row)
+        ══════════════════════════════════ */
+        .brand-strip-section {
+            padding: 4rem 5%;
+            background: var(--off-white);
+        }
+
+        /* ══════════════════════════════════
+           CTA BANNER
+        ══════════════════════════════════ */
+        .prod-cta {
+            background: linear-gradient(135deg, #003D82 0%, #0052A3 100%);
+            padding: 5rem 5%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .prod-cta::before {
+            content: "";
+            position: absolute;
+            top: -80px;
+            right: -80px;
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(201, 169, 110, 0.14) 0%, transparent 65%);
+            pointer-events: none;
+        }
+
+        .prod-cta h2 {
+            color: #fff;
+            font-size: 2.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .prod-cta p {
+            color: rgba(255, 255, 255, 0.82);
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
+        }
+
+        /* ── SCROLL REVEAL ── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(32px);
+            transition: opacity 0.65s ease, transform 0.65s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ── RESPONSIVE HERO ── */
+        @media (max-width: 768px) {
+            .prod-hero {
+                height: 420px;
+            }
+
+            .prod-hero-overlay {
+                padding-left: 5%;
+            }
+
+            .tab-btn {
+                padding: 0.8rem 1.2rem;
+                font-size: 0.82rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .prod-hero {
+                height: 380px;
+            }
+        }
+
+        /* ── SMOOTH SECTION SCROLL ── */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .scroll-target {
+            scroll-margin-top: 110px;
+        }
+
+
+        .hdmi-bg-image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 24px;
+        }
+
+        /* Background Image */
+        .hdmi-bg-image::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: url('images/HDMI1.jpeg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.12;
+            /* Adjust dullness here */
+            z-index: 0;
+        }
+
+        /* Keep content above background */
+        .hdmi-bg-image>* {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ==================== HEADER & NAVIGATION ==================== -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/RA_New.png" alt="RAA International" style="width: 30%; cursor: pointer;"
+                    title="RAA International Trading FZC LLC">
+                <span class="logo-text">RAA International FZC LLC</span>
+            </div>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="solutions.html">Solutions</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ==================== HERO ==================== -->
+    <div class="prod-hero">
+        <img src="images/ITH14.png" alt="RAA International Products" class="prod-hero-bg">
+        <div class="prod-hero-overlay">
+            <div class="prod-hero-content">
+                <div class="prod-hero-eyebrow">Our Product Catalog</div>
+                <h1>Products Built for<br><em>Performance</em> &amp; Purpose</h1>
+                <p>From enterprise IT hardware to premium HDMI connectivity and refined lifestyle accessories —
+                    everything your business needs, all in one place.</p>
+                <div class="hero-cta-group">
+                    <a href="#hdmi" class="cta-button">RAA Connect+</a>
+                    <a href="#ithardware" class="cta-button cta-button-secondary">IT Hardware</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== TAB NAVIGATION ==================== -->
+    <div class="tab-nav-wrap">
+        <div class="tab-nav">
+            <button class="tab-btn active" onclick="scrollToSection('hdmi', this)">
+                <span class="tab-icon">🔌</span> RAA Connect+
+            </button>
+            <button class="tab-btn" onclick="scrollToSection('ithardware', this)">
+                <span class="tab-icon">🖥️</span> IT Hardware
+            </button>
+            <button class="tab-btn" onclick="scrollToSection('software', this)">
+                <span class="tab-icon">💿</span> Software
+            </button>
+            <button class="tab-btn" onclick="scrollToSection('lifestyle', this)">
+                <span class="tab-icon">👜</span> Lifestyle
+            </button>
+            <button class="tab-btn" onclick="scrollToSection('brands', this)">
+                <span class="tab-icon">🌍</span> Our Brands
+            </button>
+        </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════
+         SECTION 1 — RAA CONNECT+ HDMI
+    ══════════════════════════════════════════ -->
+    <section class="hdmi-section scroll-target" id="hdmi">
+        <div class="hdmi-inner ">
+
+            <!-- <div class="hdmi-left reveal">
+                <div class="hdmi-brand-badge">
+                    <img src="images/HDMI1.jpeg" alt="RAA Connect+" style="width: 18px;">
+
+                </div>
+
+            </div> -->
+            <!-- LEFT -->
+            <div class="hdmi-left reveal">
+                <div class="hdmi-brand-badge">
+                    <span class="dot"></span>
+                    <span>RAA Connect+ · Signature Brand</span>
+                </div>
+
+                <h2>One Connection.<br><em>Seamless Performance.</em></h2>
+                <p class="hdmi-tagline">Premium HDMI 2.1 Cables — Engineered for Excellence</p>
+
+                <p class="hdmi-desc">
+                    RAA Connect+ delivers HDMI cables built to meet the performance demands of today's high-resolution
+                    audio and video applications. Whether in a boardroom, gaming setup, or professional studio —
+                    expect zero compromise on signal quality.
+                </p>
+
+                <!-- Spec Pills -->
+                <div class="spec-pills">
+                    <div class="spec-pill"><span class="sp-icon">⚡</span> 48Gbps Bandwidth</div>
+                    <div class="spec-pill"><span class="sp-icon">📺</span> 8K Ultra HD</div>
+                    <div class="spec-pill"><span class="sp-icon">🔄</span> HDMI 2.1 Compliant</div>
+                    <div class="spec-pill"><span class="sp-icon">🎮</span> 4K@144Hz Gaming</div>
+                    <div class="spec-pill"><span class="sp-icon">🔊</span> eARC Audio</div>
+                    <div class="spec-pill"><span class="sp-icon">🛡️</span> EMI Shielded</div>
+                </div>
+
+                <!-- Feature List -->
+                <ul class="hdmi-features">
+                    <li>
+                        <span class="fi-check">✓</span>
+                        <span><strong>HDMI 2.1 Full Compliance</strong> — Maximum compatibility across all devices and
+                            platforms</span>
+                    </li>
+                    <li>
+                        <span class="fi-check">✓</span>
+                        <span><strong>8K Ultra HD Resolution</strong> — Supports 8K@60Hz and 4K@120Hz with HDR</span>
+                    </li>
+                    <li>
+                        <span class="fi-check">✓</span>
+                        <span><strong>48Gbps Ultra-High Speed</strong> — Stable, interference-free signal
+                            transmission</span>
+                    </li>
+                    <li>
+                        <span class="fi-check">✓</span>
+                        <span><strong>Durable Professional Build</strong> — Reinforced connectors for long-term
+                            reliability</span>
+                    </li>
+                    <li>
+                        <span class="fi-check">✓</span>
+                        <span><strong>Universal Compatibility</strong> — Works with TVs, monitors, projectors, gaming
+                            consoles &amp; AV systems</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="hdmi-right reveal">
+
+                <!-- Spec Table Card -->
+                <div class="hdmi-visual-card">
+                    <h4>Technical Specifications</h4>
+                    <table class="spec-table">
+                        <tr>
+                            <td>Version</td>
+                            <td>HDMI 2.1</td>
+                        </tr>
+                        <tr>
+                            <td>Max Resolution</td>
+                            <td>8K (7680 × 4320)</td>
+                        </tr>
+                        <tr>
+                            <td>Bandwidth</td>
+                            <td>48 Gbps</td>
+                        </tr>
+                        <tr>
+                            <td>Refresh Rate</td>
+                            <td>4K@120Hz / 8K@60Hz</td>
+                        </tr>
+                        <tr>
+                            <td>Audio</td>
+                            <td>eARC / Dolby Atmos</td>
+                        </tr>
+                        <tr>
+                            <td>HDR Support</td>
+                            <td>HDR10, HLG, Dolby Vision</td>
+                        </tr>
+                        <tr>
+                            <td>Cable Lengths</td>
+                            <td>1m / 2m / 3m / 5m</td>
+                        </tr>
+                        <tr>
+                            <td>Certification</td>
+                            <td>Premium Certified HDMI</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- Applications Card -->
+                <div class="hdmi-visual-card">
+                    <h4>Applications &amp; Use Cases</h4>
+                    <div class="apps-grid">
+                        <div class="app-item"><span class="app-icon">🏠</span><span>Home Entertainment</span></div>
+                        <div class="app-item"><span class="app-icon">🎮</span><span>Gaming &amp; High-End PCs</span>
+                        </div>
+                        <div class="app-item"><span class="app-icon">🏢</span><span>Corporate Boardrooms</span></div>
+                        <div class="app-item"><span class="app-icon">🎬</span><span>Professional AV</span></div>
+                        <div class="app-item"><span class="app-icon">📺</span><span>Digital Signage</span></div>
+                        <div class="app-item"><span class="app-icon">💻</span><span>Workstations</span></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         SECTION 2 — IT HARDWARE
+    ══════════════════════════════════════════ -->
+    <section class="prod-section scroll-target" id="ithardware">
+        <div class="prod-section-header reveal">
+            <span class="section-eyebrow">IT Infrastructure</span>
+            <h2>IT Hardware &amp; Components</h2>
+            <p>Enterprise-grade infrastructure from globally trusted brands — servers, workstations, peripherals,
+                networking &amp; more.</p>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="hw-categories">
+
+            <!-- Computing -->
+            <div class="hw-cat-block reveal">
+                <div class="hw-cat-header">
+                    <span class="cat-icon">🖥️</span>
+                    <h3>Computing Systems</h3>
+                    <!-- <span class="cat-count">5 Products</span> -->
+                </div>
+                <div class="hw-product-grid">
+                    <div class="hw-product-cell">
+                        <div class="pc-icon">🏗️</div>
+                        <strong>Servers &amp; Workstations</strong>
+                        <p>Enterprise and professional computing powerhouses</p>
+                    </div>
+                    <div class="hw-product-cell">
+                        <div class="pc-icon">🖥️</div>
+                        <strong>Desktop Computers</strong>
+                        <p>High-performance business desktops</p>
+                    </div>
+                    <div class="hw-product-cell">
+                        <div class="pc-icon">💻</div>
+                        <strong>Laptops</strong>
+                        <p>Mobile computing solutions for every role</p>
+                    </div>
+                    <div class="hw-product-cell">
+                        <div class="pc-icon">🖥️</div>
+                        <strong>All-in-One Computers</strong>
+                        <p>Space-efficient integrated systems</p>
+                    </div>
+                    <div class="hw-product-cell">
+                        <div class="pc-icon">📱</div>
+                        <strong>Tablets</strong>
+                        <p>Portable productivity devices</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Peripherals -->
+            <div class="hw-cat-block reveal">
+                <div class="hw-cat-header">
+                    <span class="cat-icon">🖱️</span>
+                    <h3>Peripherals &amp; Accessories</h3>
+                    <!-- <span class="cat-count">7 Products</span> -->
+                </div>
+                <div class="hw-product-grid">
+                    <div class="hw-product-cell">
+                        <div class="pc-icon">🖥️</div>
+                        <strong>Monitors</strong>
+                        <p>LED &amp; LCD displays for all needs</p>
+                    </div>
+                    <div class="hw-product-cell">
+                        <div class="pc-icon">⌨️</div>
+                        <strong>Keyboards &amp; Mice</strong>
+                        <p>Input devices and combos</p>
+                    </div>
+                    <div class="hw-product-cell">
+                        <div class="pc-icon">🎧</div>
+                        <strong>Headsets &amp; Microphones</strong>
+                        <p>Professional audio solutions</p>
+                    </div>
+                    <div class="hw-product-cell">
+                        <div class="pc-icon">🔊</div>
+                        <strong>Speakers</strong>
+                        <p>Audio output systems</p>
+                    </div>
+                    <div class="hw-product-cell">
+                        <div class="pc-icon">🔌</div>
+                        <strong>Docking Stations</strong>
+                        <p>Mobile connectivity hubs</p>
+                    </div>
+                    <div class="hw-product-cell">
+                        <div class="pc-icon">💾</div>
+                        <strong>USB Flash Drives</strong>
+                        <p>Compact data storage solutions</p>
+                    </div>
+                    <div class="hw-product-cell">
+                        <div class="pc-icon">💿</div>
+                        <strong>Optical Drives</strong>
+                        <p>CD/DVD readers &amp; writers</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Storage -->
+            <div class="hw-cat-block reveal">
+                <div class="hw-cat-header">
+                    <span class="cat-icon">💾</span>
+                    <h3>Storage &amp; Components</h3>
+                    <!-- <span class="cat-count">6 Products</span> -->
+                </div>
+                <div class="hw-product-grid">
+                    <div class="hw-product-cell">
+                        <div class="pc-icon">⚙️</div>
+                        <strong>Processors &amp; RAM</strong>
+                        <p>CPU and memory upgrades</p>
+                    </div>
+                    <div class="hw-product-cell">
+                        <div class="pc-icon">🗄️</div>
+                        <strong>Internal Hard Disks</strong>
+                        <p>High-capacity HDD storage</p>
+                    </div>
+                    <div class="hw-product-cell">
+                        <div class="pc-icon">💼</div>
+                        <strong>External Hard Disks</strong>
+                        <p>Portable storage on the go</p>
+                    </div>
+                    <div class="hw-product-cell">
+                        <div class="pc-icon">⚡</div>
+                        <strong>Internal SSDs</strong>
+                        <p>Fast solid-state drives</p>
+                    </div>
+                    <div class="hw-product-cell">
+                        <div class="pc-icon">🔋</div>
+                        <strong>External SSDs</strong>
+                        <p>Portable high-speed storage</p>
+                    </div>
+                    <div class="hw-product-cell">
+                        <div class="pc-icon">🎮</div>
+                        <strong>Graphics Cards</strong>
+                        <p>GPU accelerators for any workload</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Networking -->
+            <div class="hw-cat-block reveal">
+                <div class="hw-cat-header">
+                    <span class="cat-icon">🌐</span>
+                    <h3>Networking Solutions</h3>
+                    <!-- <span class="cat-count">6 Products</span> -->
+                </div>
+                <div class="hw-product-grid">
+                    <div class="hw-product-cell">
+                        <div class="pc-icon">📡</div>
+                        <strong>Routers</strong>
+                        <p>High-speed network connectivity</p>
+                    </div>
+                    <div class="hw-product-cell">
+                        <div class="pc-icon">🔀</div>
+                        <strong>Network Switches</strong>
+                        <p>Managed and unmanaged</p>
+                    </div>
+                    <div class="hw-product-cell">
+                        <div class="pc-icon">📶</div>
+                        <strong>Wireless Access Points</strong>
+                        <p>Enterprise WiFi coverage</p>
+                    </div>
+                    <div class="hw-product-cell">
+                        <div class="pc-icon">🔌</div>
+                        <strong>USB Dongles</strong>
+                        <p>Wireless adapter solutions</p>
+                    </div>
+                    <div class="hw-product-cell">
+                        <div class="pc-icon">📻</div>
+                        <strong>Range Extenders</strong>
+                        <p>WiFi signal boosters</p>
+                    </div>
+                    <div class="hw-product-cell">
+                        <div class="pc-icon">🔗</div>
+                        <strong>Network Cables</strong>
+                        <p>Ethernet &amp; structured cabling</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Printing -->
+            <div class="hw-cat-block reveal">
+                <div class="hw-cat-header">
+                    <span class="cat-icon">🖨️</span>
+                    <h3>Printing &amp; Imaging</h3>
+                    <!-- <span class="cat-count">5 Products</span> -->
+                </div>
+                <div class="hw-product-grid">
+                    <div class="hw-product-cell">
+                        <div class="pc-icon">🖨️</div>
+                        <strong>Inkjet Printers</strong>
+                        <p>Color and B/W printing</p>
+                    </div>
+                    <div class="hw-product-cell">
+                        <div class="pc-icon">🖨️</div>
+                        <strong>Laser Printers</strong>
+                        <p>High-speed volume printing</p>
+                    </div>
+                    <div class="hw-product-cell">
+                        <div class="pc-icon">📱</div>
+                        <strong>Mobile Printers</strong>
+                        <p>Compact portable solutions</p>
+                    </div>
+                    <div class="hw-product-cell">
+                        <div class="pc-icon">🗒️</div>
+                        <strong>Scanners</strong>
+                        <p>Document scanning devices</p>
+                    </div>
+                    <div class="hw-product-cell">
+                        <div class="pc-icon">🖨️</div>
+                        <strong>All-in-One Printers</strong>
+                        <p>Print, copy, scan &amp; fax</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         SECTION 3 — SOFTWARE
+    ══════════════════════════════════════════ -->
+    <section class="prod-section alt-bg scroll-target" id="software">
+        <div class="prod-section-header reveal">
+            <span class="section-eyebrow">Digital Tools</span>
+            <h2>Software Solutions</h2>
+            <p>Licensed software from the world's leading publishers — OS, productivity, security &amp; server
+                solutions.</p>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="hw-categories">
+
+            <!-- OS -->
+            <div class="hw-cat-block reveal">
+                <div class="hw-cat-header sw-cat-header">
+                    <span class="cat-icon">🖥️</span>
+                    <h3>Operating Systems</h3>
+                    <!--<span class="cat-count">3 Products</span>-->
+                </div>
+                <div class="hw-product-grid">
+                    <div class="hw-product-cell">
+                        <div class="pc-icon">🪟</div>
+                        <strong>Windows Pro</strong>
+                        <p>Professional desktop OS</p>
+                    </div>
+                    <div class="hw-product-cell">
+                        <div class="pc-icon">🖧</div>
+                        <strong>Windows Server</strong>
+                        <p>Enterprise server operating systems</p>
+                    </div>
+                    <div class="hw-product-cell">
+                        <div class="pc-icon">🐧</div>
+                        <strong>Linux</strong>
+                        <p>Open-source solutions &amp; distributions</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Productivity -->
+            <div class="hw-cat-block reveal">
+                <div class="hw-cat-header sw-cat-header">
+                    <span class="cat-icon">📊</span>
+                    <h3>Productivity &amp; Creative</h3>
+                    <!--<span class="cat-count">3 Products</span>-->
+                </div>
+                <div class="hw-product-grid">
+                    <div class="hw-product-cell">
+                        <div class="pc-icon">📄</div>
+                        <strong>Microsoft Office Suite</strong>
+                        <p>Word, Excel, PowerPoint, Outlook</p>
+                    </div>
+                    <div class="hw-product-cell">
+                        <div class="pc-icon">🎨</div>
+                        <strong>Adobe Software</strong>
+                        <p>Creative Suite applications</p>
+                    </div>
+                    <div class="hw-product-cell">
+                        <div class="pc-icon">💼</div>
+                        <strong>Business Applications</strong>
+                        <p>Specialized productivity tools</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Security -->
+            <div class="hw-cat-block reveal">
+                <div class="hw-cat-header sw-cat-header">
+                    <span class="cat-icon">🔒</span>
+                    <h3>Security &amp; Backup</h3>
+                    <!--<span class="cat-count">3 Products</span>-->
+                </div>
+                <div class="hw-product-grid">
+                    <div class="hw-product-cell">
+                        <div class="pc-icon">🛡️</div>
+                        <strong>Antivirus &amp; Internet Security</strong>
+                        <p>Endpoint protection solutions</p>
+                    </div>
+                    <div class="hw-product-cell">
+                        <div class="pc-icon">💾</div>
+                        <strong>Backup Software</strong>
+                        <p>Automated data protection</p>
+                    </div>
+                    <div class="hw-product-cell">
+                        <div class="pc-icon">🔥</div>
+                        <strong>Firewall Solutions</strong>
+                        <p>Network perimeter security</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Server -->
+            <div class="hw-cat-block reveal">
+                <div class="hw-cat-header sw-cat-header">
+                    <span class="cat-icon">📁</span>
+                    <h3>Server &amp; Database</h3>
+                    <!--<span class="cat-count">2 Products</span>-->
+                </div>
+                <div class="hw-product-grid">
+                    <div class="hw-product-cell">
+                        <div class="pc-icon">🗄️</div>
+                        <strong>SQL Server</strong>
+                        <p>Database management &amp; analytics</p>
+                    </div>
+                    <div class="hw-product-cell">
+                        <div class="pc-icon">🖧</div>
+                        <strong>Server Software</strong>
+                        <p>Enterprise infrastructure solutions</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         SECTION 4 — LIFESTYLE / LEATHER
+    ══════════════════════════════════════════ -->
+    <section class="lifestyle-section scroll-target" id="lifestyle">
+        <div class="prod-section-header reveal">
+            <span class="section-eyebrow">Premium Collection</span>
+            <h2>Lifestyle &amp; Leather Goods</h2>
+            <p>Crafted for the modern professional — premium leather bags, wallets, belts, and accessories that blend
+                function with refined aesthetics.</p>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="lifestyle-grid">
+
+            <div class="lifestyle-card reveal">
+                <div class="lifestyle-card-top">💼</div>
+                <div class="lifestyle-card-body">
+                    <h3>Laptop Bags</h3>
+                    <p>Professional laptop bags designed to protect and carry your essential devices with style. Fits
+                        13" to 17" laptops with padded compartments and organisational pockets.</p>
+                    <div>
+                        <span class="ls-tag">Padded Interior</span>
+                        <span class="ls-tag">Multiple Sizes</span>
+                        <span class="ls-tag">Water Resistant</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lifestyle-card reveal">
+                <div class="lifestyle-card-top">🎒</div>
+                <div class="lifestyle-card-body">
+                    <h3>Duffle Bags</h3>
+                    <p>Versatile duffle bags perfect for travel, work, and everyday use. Premium materials with
+                        reinforced handles and large capacity for all your essentials.</p>
+                    <div>
+                        <span class="ls-tag">Travel Ready</span>
+                        <span class="ls-tag">Large Capacity</span>
+                        <span class="ls-tag">Durable Build</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lifestyle-card reveal">
+                <div class="lifestyle-card-top">👜</div>
+                <div class="lifestyle-card-body">
+                    <h3>Designer Ladies' Bags</h3>
+                    <p>Contemporary designer handbags combining elegance, functionality, and premium materials — ideal
+                        for the modern professional woman.</p>
+                    <div>
+                        <span class="ls-tag">Contemporary Design</span>
+                        <span class="ls-tag">Premium Leather</span>
+                        <span class="ls-tag">Elegant Finish</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lifestyle-card reveal">
+                <div class="lifestyle-card-top">👛</div>
+                <div class="lifestyle-card-body">
+                    <h3>Wallets</h3>
+                    <p>Quality wallets with multiple card compartments, bill sections, RFID protection technology, and
+                        modern minimalist design for everyday carry.</p>
+                    <div>
+                        <span class="ls-tag">RFID Protected</span>
+                        <span class="ls-tag">Slim Profile</span>
+                        <span class="ls-tag">Multi-compartment</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lifestyle-card reveal">
+                <div class="lifestyle-card-top">🎀</div>
+                <div class="lifestyle-card-body">
+                    <h3>Belts</h3>
+                    <p>Premium leather belts crafted for professional and casual wear. Superior craftsmanship with solid
+                        buckles and genuine leather that ages beautifully.</p>
+                    <div>
+                        <span class="ls-tag">Genuine Leather</span>
+                        <span class="ls-tag">Solid Buckles</span>
+                        <span class="ls-tag">All Sizes</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lifestyle-card reveal">
+                <div class="lifestyle-card-top">✨</div>
+                <div class="lifestyle-card-body">
+                    <h3>Premium Accessories</h3>
+                    <p>A curated collection of accessories selected for durability, functionality, and design —
+                        keychains, cardholders, and refined everyday carry items.</p>
+                    <div>
+                        <span class="ls-tag">Curated Selection</span>
+                        <span class="ls-tag">Gift Ready</span>
+                        <span class="ls-tag">Premium Quality</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         BRAND LOGOS
+    ══════════════════════════════════════════ -->
+    <section class="brand-strip-section scroll-target" id="brands">
+        <div class="prod-section-header reveal">
+            <span class="section-eyebrow">Our Partners</span>
+            <h2>Powered by Leading Brands</h2>
+            <p>We partner with the world's most trusted technology manufacturers to bring you genuine, certified
+                products.</p>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="brands-carousel" style="margin-top: 2rem;">
+            <button class="brand-nav prev">&#10094;</button>
+            <div class="brands-wrapper">
+                <div class="brands-track">
+                    <div class="brand-card"><img src="images/brands/hp.png" alt="HP"></div>
+                    <div class="brand-card"><img src="images/brands/dell.png" alt="Dell"></div>
+                    <div class="brand-card"><img src="images/brands/lenovo.png" alt="Lenovo"></div>
+                    <div class="brand-card"><img src="images/brands/zotac.png" alt="Zotac"></div>
+                    <div class="brand-card"><img src="images/brands/crucial.png" alt="Crucial"></div>
+                    <div class="brand-card"><img src="images/brands/acer.png" alt="Acer"></div>
+                    <div class="brand-card"><img src="images/brands/intel.png" alt="Intel"></div>
+                    <div class="brand-card"><img src="images/brands/benq.png" alt="BenQ"></div>
+                    <div class="brand-card"><img src="images/brands/apc.png" alt="APC"></div>
+                    <div class="brand-card"><img src="images/brands/logitech.png" alt="Logitech"></div>
+                    <div class="brand-card"><img src="images/brands/RAA_V1.png" alt="RAA"></div>
+                    <div class="brand-card"><img src="images/brands/nvidia.png" alt="NVIDIA"></div>
+                    <div class="brand-card"><img src="images/brands/aruba.png" alt="Aruba"></div>
+                    <div class="brand-card"><img src="images/brands/samsung.png" alt="Samsung"></div>
+                    <div class="brand-card"><img src="images/brands/wd_v3.png" alt="WD"></div>
+                    <div class="brand-card"><img src="images/brands/lg.png" alt="LG"></div>
+                    <div class="brand-card"><img src="images/brands/adobe.png" alt="Adobe"></div>
+                    <div class="brand-card"><img src="images/brands/asus.png" alt="ASUS"></div>
+                    <div class="brand-card"><img src="images/brands/linksys.png" alt="Linksys"></div>
+                </div>
+            </div>
+            <button class="brand-nav next">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         WHY CHOOSE RAA PRODUCTS
+    ══════════════════════════════════════════ -->
+    <section class="why-section">
+        <div class="prod-section-header reveal">
+            <span class="section-eyebrow">Our Promise</span>
+            <h2>Why Choose RAA Products?</h2>
+            <p>Every product we carry is backed by our commitment to authenticity, quality, and exceptional service.</p>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="why-grid">
+            <div class="why-card reveal">
+                <div class="why-icon">✅</div>
+                <h4>Genuine Products Only</h4>
+                <p>All items sourced directly from authorized distributors with authentic warranties and verified
+                    certification.</p>
+            </div>
+            <div class="why-card reveal">
+                <div class="why-icon">🌍</div>
+                <h4>Trusted Global Brands</h4>
+                <p>Partnership with world-renowned manufacturers ensures every product meets international quality
+                    standards.</p>
+            </div>
+            <div class="why-card reveal">
+                <div class="why-icon">💰</div>
+                <h4>Competitive Pricing</h4>
+                <p>Best market rates with flexible payment options and bulk pricing for all customer types and order
+                    sizes.</p>
+            </div>
+            <div class="why-card reveal">
+                <div class="why-icon">🛡️</div>
+                <h4>Full Warranty Support</h4>
+                <p>Complete warranty coverage and professional after-sales technical support for every purchase.</p>
+            </div>
+            <div class="why-card reveal">
+                <div class="why-icon">🚀</div>
+                <h4>Fast UAE Delivery</h4>
+                <p>Efficient supply chain with prompt delivery across the UAE — business and residential locations.</p>
+            </div>
+            <div class="why-card reveal">
+                <div class="why-icon">🎯</div>
+                <h4>Expert Technical Advice</h4>
+                <p>Our knowledgeable team provides guidance to help you choose the right product for your exact need.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         CTA BANNER
+    ══════════════════════════════════════════ -->
+    <section class="prod-cta">
+        <h2>Need a Custom Quote or Bulk Order?</h2>
+        <p>Contact our product specialists for detailed information, bulk pricing, or custom requirements across all
+            product lines.</p>
+        <a href="contact.html" class="cta-button">Request a Quote</a>
+        <a href="solutions.html" class="cta-button cta-button-secondary">View Solutions</a>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>RAA International Trading FZC LLC</h4>
+                <p>Established in 2021 as a UAE-based trading company specializing in IT products, connectivity
+                    solutions, and premium accessories.</p>
+                <p style="margin-top: 1rem;"><strong>RAA Connect+</strong><br>Premium HDMI &amp; Connectivity Solutions
+                </p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a><br>
+                <a href="about.html">About Us</a><br>
+                <a href="products.html">Products</a><br>
+                <a href="solutions.html">Solutions</a><br>
+                <a href="contact.html">Contact Us</a><br>
+            </div>
+            <div class="footer-section">
+                <h4>Product Categories</h4>
+                <a href="#hdmi">RAA Connect+ HDMI</a><br>
+                <a href="#ithardware">IT Hardware</a><br>
+                <a href="#software">Software Solutions</a><br>
+                <a href="#lifestyle">Lifestyle Accessories</a><br>
+                <a href="#brands">Our Brands</a><br>
+            </div>
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <p>📧 Email: <a href="mailto:info@raaintl.com">info@raaintl.com</a></p>
+                <p>📱 WhatsApp: <a href="https://wa.me/971503212721">Chat with us</a></p>
+                <p>📍 Location: UAE</p>
+                <p style="margin-top: 1rem;"><strong>Hours:</strong><br>Sunday – Thursday<br>9:00 AM – 6:00 PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2021 – 2024 RAA International Trading FZC LLC. All rights reserved. | Privacy Policy | Terms of Service
+            </p>
+            <p style="margin-top: 0.8rem; font-size: 0.85rem;">Delivering Innovation in Technology and Design</p>
+        </div>
+    </footer>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script>
+        // ── Mobile Menu ──
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navLinksEl = document.getElementById('navLinks');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            navLinksEl.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => navLinksEl.classList.remove('active'));
+        });
+
+        // ── Active Link ──
+        function setActiveLink() {
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === currentPage) link.classList.add('active');
+            });
+        }
+        setActiveLink();
+
+        // ── Tab scroll ──
+        function scrollToSection(id, btn) {
+            document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+        }
+
+        // Update active tab on scroll
+        window.addEventListener('scroll', () => {
+            const sections = ['hdmi', 'ithardware', 'software', 'lifestyle', 'brands'];
+            const scrollY = window.scrollY + 160;
+
+            sections.forEach((id, i) => {
+                const el = document.getElementById(id);
+                if (!el) return;
+                if (scrollY >= el.offsetTop && scrollY < (el.offsetTop + el.offsetHeight)) {
+                    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                    document.querySelectorAll('.tab-btn')[i]?.classList.add('active');
+                }
+            });
+        });
+
+        // ── Scroll Reveal ──
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.08, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        // ── Brand carousel ──
+        let brandIndex = 0;
+        const track = document.querySelector('.brands-track');
+        const cards = document.querySelectorAll('.brand-card');
+        const cardWidth = 200;
+
+        function moveBrands(step) {
+            const wrapper = document.querySelector('.brands-wrapper');
+            const visible = Math.floor(wrapper.offsetWidth / cardWidth);
+            brandIndex += step;
+            if (brandIndex < 0) brandIndex = 0;
+            if (brandIndex > cards.length - visible) brandIndex = 0;
+            track.style.transform = `translateX(-${brandIndex * cardWidth}px)`;
+        }
+
+        document.querySelector('.brand-nav.next').onclick = () => moveBrands(1);
+        document.querySelector('.brand-nav.prev').onclick = () => moveBrands(-1);
+        setInterval(() => moveBrands(1), 2500);
+    </script>
+
+</body>
+
+</html>
