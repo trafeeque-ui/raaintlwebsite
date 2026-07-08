@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Contact RAA International Trading FZC LLC - Get in touch for product inquiries, quotations, or partnership opportunities in the UAE.">
+    <meta name="keywords" content="contact RAA International, inquiry, support, partnership, UAE">
+    <meta name="author" content="RAA International Trading FZC LLC">
+    <title>Contact Us - RAA International Trading</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* ══════════════════════════════════════════
+           CONTACT PAGE — ADDITIONAL STYLES
+        ══════════════════════════════════════════ */
+
+        :root {
+            --gold: #C9A96E;
+            --gold-light: #e6d3a3;
+            --gold-dark: #9F7E4A;
+            --blue-deep: #003D82;
+            --blue-mid: #0052A3;
+            --blue-accent: #0066CC;
+            --off-white: #F8F9FB;
+            --text-dark: #1a1a2e;
+            --text-mid: #444;
+            --text-soft: #777;
+        }
+
+        /* ── HERO ── */
+        .con-hero {
+            position: relative;
+            width: 100vw;
+            left: 50%;
+            margin-left: -50vw;
+            height: 480px;
+            overflow: hidden;
+            background: #000c1a;
+        }
+
+        .con-hero-bg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            opacity: 0.55;
+            display: block;
+        }
+
+        .con-hero-overlay {
+            position: absolute;
+            inset: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 5%;
+        }
+
+        .con-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #fff;
+        }
+
+        .con-hero-eyebrow {
+            font-size: 0.72rem;
+            letter-spacing: 0.38em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1.2rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .con-hero-eyebrow::before,
+        .con-hero-eyebrow::after {
+            content: '';
+            width: 30px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        .con-hero-content h1 {
+            color: #fff;
+            font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .con-hero-content h1 em {
+            font-style: italic;
+            color: var(--gold-light);
+        }
+
+        .con-hero-content p {
+            color: rgba(255, 255, 255, 0.82);
+            font-size: 1.08rem;
+            line-height: 1.75;
+            margin-bottom: 0;
+        }
+
+        .con-hero::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 120px;
+            background: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.9) 80%, #fff 100%);
+            z-index: 5;
+            pointer-events: none;
+        }
+
+        /* ── SECTION WRAPPER ── */
+        .con-section {
+            padding: 5rem 5%;
+        }
+
+        .con-section.alt-bg {
+            background: var(--off-white);
+        }
+
+        .con-section-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .section-eyebrow {
+            font-size: 0.72rem;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 0.8rem;
+        }
+
+        .section-eyebrow::before,
+        .section-eyebrow::after {
+            content: '';
+            width: 20px;
+            height: 1px;
+            background: var(--gold);
+            opacity: 0.7;
+        }
+
+        .con-section-header h2 {
+            font-size: clamp(1.8rem, 3vw, 2.6rem);
+            color: var(--blue-deep);
+            margin-bottom: 0.8rem;
+        }
+
+        .con-section-header p {
+            color: var(--text-soft);
+            font-size: 1rem;
+            max-width: 650px;
+            margin: 0 auto;
+            line-height: 1.75;
+        }
+
+        .section-divider {
+            width: 55px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--blue-accent), var(--gold));
+            border-radius: 2px;
+            margin: 1rem auto 0;
+        }
+
+        /* ── CONTACT INFO CARDS ── */
+        .con-info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .con-info-card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 2.4rem 2rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border-top: 4px solid var(--blue-deep);
+            transition: all 0.3s ease;
+        }
+
+        .con-info-card:nth-child(2) {
+            border-top-color: var(--blue-accent);
+        }
+
+        .con-info-card:nth-child(3) {
+            border-top-color: var(--gold);
+        }
+
+        .con-info-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 14px 34px rgba(0, 0, 0, 0.14);
+        }
+
+        .con-info-icon {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .con-info-card h3 {
+            color: var(--blue-deep);
+            font-size: 1.15rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .con-info-card .con-info-main {
+            color: var(--text-dark);
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+        }
+
+        .con-info-card .con-info-sub {
+            font-size: 0.88rem;
+            color: var(--text-soft);
+            margin-bottom: 1.4rem;
+        }
+
+        @media (max-width: 900px) {
+            .con-info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ── FORM PANEL ── */
+        .con-form-panel {
+            max-width: 850px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .con-form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0 1.5rem;
+        }
+
+        .con-form-grid .form-group.full {
+            grid-column: 1 / -1;
+        }
+
+        #contactForm {
+            max-width: none;
+            margin: 0;
+        }
+
+        #contactForm label {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--blue-deep);
+            letter-spacing: 0.02em;
+        }
+
+        #contactForm input[type="text"],
+        #contactForm input[type="email"],
+        #contactForm input[type="tel"],
+        #contactForm textarea,
+        #contactForm select {
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 0.85rem 1rem;
+            background: var(--off-white);
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        #contactForm input[type="text"]:focus,
+        #contactForm input[type="email"]:focus,
+        #contactForm input[type="tel"]:focus,
+        #contactForm textarea:focus,
+        #contactForm select:focus {
+            border-color: var(--gold);
+            background: #fff;
+            box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.18);
+        }
+
+        #contactForm .checkbox-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+            font-size: 0.88rem;
+            color: var(--text-mid);
+        }
+
+        #contactForm .checkbox-row input {
+            width: auto;
+            margin-top: 0.2rem;
+        }
+
+        #contactForm button[type="submit"] {
+            background: linear-gradient(135deg, var(--blue-deep), var(--blue-mid));
+            border-radius: 30px;
+            padding: 0.95rem;
+            font-family: 'DM Sans', sans-serif;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+
+        #contactForm button[type="submit"]:hover {
+            background: linear-gradient(135deg, var(--blue-mid), var(--blue-accent));
+        }
+
+        #formMessage {
+            max-width: 850px;
+            margin: 1.5rem auto 0 !important;
+            border-radius: 10px;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        @media (max-width: 640px) {
+            .con-form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .con-form-panel {
+                padding: 2rem 1.4rem;
+            }
+        }
+
+        /* ── FAQ ACCORDION ── */
+        .faq-list {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 14px rgba(0, 0, 0, 0.06);
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 1.3rem 1.6rem;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--blue-deep);
+            font-size: 0.98rem;
+        }
+
+        .faq-question .faq-toggle {
+            flex-shrink: 0;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: var(--off-white);
+            color: var(--blue-accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .faq-item.open .faq-question .faq-toggle {
+            transform: rotate(45deg);
+            background: var(--gold);
+            color: #fff;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease, padding 0.35s ease;
+            padding: 0 1.6rem;
+        }
+
+        .faq-answer p {
+            color: var(--text-mid);
+            font-size: 0.92rem;
+            line-height: 1.75;
+            margin: 0 0 1.4rem;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 300px;
+        }
+
+        /* ── WHY CONTACT / WHY GRID ── */
+        .why-section {
+            padding: 5rem 5%;
+            background: #fff;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.8rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .why-card {
+            background: var(--off-white);
+            border-radius: 14px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            transition: all 0.3s ease;
+            border-top: 3px solid transparent;
+        }
+
+        .why-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-top-color: var(--blue-accent);
+            background: #fff;
+        }
+
+        .why-icon {
+            font-size: 2rem;
+        }
+
+        .why-card h4 {
+            font-size: 1rem;
+            color: var(--blue-deep);
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .why-card p {
+            font-size: 0.88rem;
+            color: var(--text-soft);
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .why-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .con-hero {
+                height: 420px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .con-hero {
+                height: 380px;
+            }
+        }
+
+        /* ── CTA BANNER ── */
+        .con-cta {
+            background: linear-gradient(135deg, #003D82 0%, #0052A3 100%);
+            padding: 5rem 5%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .con-cta::before {
+            content: "";
+            position: absolute;
+            top: -80px;
+            right: -80px;
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(201, 169, 110, 0.14) 0%, transparent 65%);
+            pointer-events: none;
+        }
+
+        .con-cta h2 {
+            color: #fff;
+            font-size: 2.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .con-cta p {
+            color: rgba(255, 255, 255, 0.82);
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
+        }
+
+        /* ── SCROLL REVEAL ── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ==================== HEADER & NAVIGATION ==================== -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/RA_New.png" alt="RAA International" style="width: 30%; cursor: pointer;"
+                    title="RAA International Trading FZC LLC">
+                <span class="logo-text">RAA International FZC LLC</span>
+            </div>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="solutions.html">Solutions</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ==================== HERO ==================== -->
+    <div class="con-hero">
+        <img src="images/About_Us_V10.png" alt="Contact RAA International" class="con-hero-bg">
+        <div class="con-hero-overlay">
+            <div class="con-hero-content">
+                <div class="con-hero-eyebrow">Get In Touch</div>
+                <h1>Let's Start a <em>Conversation</em></h1>
+                <p>Reach out for product inquiries, quotations, or partnership opportunities — our team is ready to
+                    help.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== CONTACT INFORMATION ==================== -->
+    <section class="con-section">
+        <div class="con-section-header reveal">
+            <span class="section-eyebrow">Reach Us</span>
+            <h2>Get In Touch</h2>
+            <p>Choose the option that works best for you — our team typically responds within 24 hours.</p>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="con-info-grid">
+            <div class="con-info-card reveal">
+                <div class="con-info-icon">📧</div>
+                <h3>Email</h3>
+                <p class="con-info-main">info@raaintl.com</p>
+                <p class="con-info-sub">For general inquiries and support</p>
+                <a href="mailto:info@raaintl.com" class="cta-button" style="display: inline-block; margin: 0;">Send
+                    Email</a>
+            </div>
+            <div class="con-info-card reveal">
+                <div class="con-info-icon">📱</div>
+                <h3>WhatsApp</h3>
+                <p class="con-info-main">Chat with us directly</p>
+                <p class="con-info-sub">Quick response and instant support</p>
+                <a href="https://wa.me/971503212721" class="cta-button" style="display: inline-block; margin: 0;">Chat
+                    on WhatsApp</a>
+            </div>
+            <div class="con-info-card reveal">
+                <div class="con-info-icon">🕐</div>
+                <h3>Business Hours</h3>
+                <p class="con-info-main">Sunday – Thursday<br>9:00 AM – 6:00 PM</p>
+                <p class="con-info-sub">Friday – Saturday: Closed &nbsp;·&nbsp; UAE Time (GST)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT FORM ==================== -->
+    <section class="con-section alt-bg">
+        <div class="con-section-header reveal">
+            <span class="section-eyebrow">Send a Message</span>
+            <h2>Send Us Your Inquiry</h2>
+            <p>Fill out the form below and our team will respond within 24 hours.</p>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="con-form-panel reveal">
+            <form id="contactForm">
+                <div class="con-form-grid">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+971 XX XXX XXXX" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">Company Name</label>
+                        <input type="text" id="company" name="company" placeholder="Enter your company name">
+                    </div>
+
+                    <div class="form-group full">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">-- Select a Subject --</option>
+                            <option value="product-inquiry">Product Inquiry</option>
+                            <option value="service-inquiry">Service Inquiry</option>
+                            <option value="software-development">Software Development</option>
+                            <option value="dashboard-solution">Dashboard Solution</option>
+                            <option value="partnership">Partnership Opportunity</option>
+                            <option value="bulk-order">Bulk Order</option>
+                            <option value="support">Technical Support</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group full">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message"
+                            placeholder="Please describe your inquiry or requirements..." required></textarea>
+                    </div>
+
+                    <div class="form-group full">
+                        <label class="checkbox-row">
+                            <input type="checkbox" name="subscribe">
+                            <span>Yes, I would like to receive updates and special offers from RAA
+                                International</span>
+                        </label>
+                    </div>
+
+                    <div class="form-group full">
+                        <button type="submit">Send Inquiry</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div id="formMessage" style="display: none; padding: 1rem; text-align: center;"></div>
+    </section>
+
+    <!-- ==================== FAQ ==================== -->
+    <section class="con-section alt-bg">
+        <div class="con-section-header reveal">
+            <span class="section-eyebrow">Have Questions?</span>
+            <h2>Frequently Asked Questions</h2>
+            <p>Quick answers to the questions we hear most often.</p>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="faq-list">
+            <div class="faq-item reveal">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>How quickly can you respond to inquiries?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>We aim to respond to all inquiries within 24 hours during business hours (Sunday–Thursday, 9
+                        AM – 6 PM GST). For urgent matters, contact us via WhatsApp for immediate assistance.</p>
+                </div>
+            </div>
+            <div class="faq-item reveal">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Do you offer bulk discounts?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we provide competitive pricing for bulk orders and corporate clients. Please contact our
+                        sales team with your requirements for a customized quotation.</p>
+                </div>
+            </div>
+            <div class="faq-item reveal">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>What is your payment and delivery policy?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>We accept various payment methods including bank transfer, cash, and credit terms for
+                        eligible businesses. Delivery is arranged based on location and can typically be completed
+                        within 1-3 business days in the UAE.</p>
+                </div>
+            </div>
+            <div class="faq-item reveal">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Can you provide customized solutions?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Absolutely! We specialize in custom software development, dashboard solutions, and tailored
+                        IT services. Contact our solutions team to discuss your specific requirements.</p>
+                </div>
+            </div>
+            <div class="faq-item reveal">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>What warranty and support do you provide?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>All products come with manufacturer warranties. We provide technical support, after-sales
+                        service, and can arrange extended warranty packages as needed.</p>
+                </div>
+            </div>
+            <div class="faq-item reveal">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Are you available for on-site consultations?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, our team can arrange on-site consultations for corporate clients, system integrators,
+                        and large projects. Contact us to schedule a visit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== WHY CONTACT ==================== -->
+    <section class="why-section">
+        <div class="con-section-header reveal">
+            <span class="section-eyebrow">Our Promise</span>
+            <h2>Why Contact RAA International?</h2>
+            <p>Every conversation is handled with the same commitment to quality and responsiveness.</p>
+            <div class="section-divider"></div>
+        </div>
+        <div class="why-grid">
+            <div class="why-card reveal">
+                <div class="why-icon">💼</div>
+                <h4>Product Inquiries</h4>
+                <p>Get detailed information about IT hardware, software, HDMI cables, and accessories with
+                    technical specifications.</p>
+            </div>
+            <div class="why-card reveal">
+                <div class="why-icon">📊</div>
+                <h4>Solution Consultation</h4>
+                <p>Discuss custom software development, dashboard solutions, and digital transformation
+                    requirements with our experts.</p>
+            </div>
+            <div class="why-card reveal">
+                <div class="why-icon">🛒</div>
+                <h4>Bulk Orders</h4>
+                <p>Request quotations for bulk purchases with special pricing and flexible payment terms for
+                    corporate clients.</p>
+            </div>
+            <div class="why-card reveal">
+                <div class="why-icon">🤝</div>
+                <h4>Partnership Opportunities</h4>
+                <p>Explore distribution, reseller, or strategic partnership opportunities with RAA International.
+                </p>
+            </div>
+            <div class="why-card reveal">
+                <div class="why-icon">🔧</div>
+                <h4>Technical Support</h4>
+                <p>Get technical assistance, troubleshooting, and support for products and implementations.</p>
+            </div>
+            <div class="why-card reveal">
+                <div class="why-icon">📈</div>
+                <h4>Business Solutions</h4>
+                <p>Discover how RAA can support your business growth with tailored products and services.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CALL TO ACTION ==================== -->
+    <section class="con-cta">
+        <h2>Ready to Partner With Us?</h2>
+        <p>Join satisfied customers across the UAE who trust RAA International for their IT and connectivity needs.
+        </p>
+        <a href="#contactForm" class="cta-button">Send Us a Message</a>
+        <a href="products.html" class="cta-button cta-button-secondary">Explore Our Products</a>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>RAA International Trading FZC LLC</h4>
+                <p>Established in 2021 as a UAE-based trading company specializing in IT products, connectivity
+                    solutions, and premium accessories.</p>
+                <p style="margin-top: 1rem;"><strong>RAA Connect+</strong><br>Premium HDMI &amp; Connectivity
+                    Solutions</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a><br>
+                <a href="about.html">About Us</a><br>
+                <a href="products.html">Products</a><br>
+                <a href="solutions.html">Solutions</a><br>
+                <a href="contact.html">Contact Us</a><br>
+            </div>
+            <div class="footer-section">
+                <h4>Our Services</h4>
+                <a href="products.html">IT Hardware</a><br>
+                <a href="products.html">Software Solutions</a><br>
+                <a href="solutions.html">Custom Development</a><br>
+                <a href="solutions.html">Dashboard Solutions</a><br>
+                <a href="products.html">Connectivity Products</a><br>
+            </div>
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <p>📧 Email: <a href="mailto:info@raaintl.com">info@raaintl.com</a></p>
+                <p>📱 WhatsApp: <a href="https://wa.me/971503212721">Chat with us</a></p>
+                <p>📍 Location: UAE</p>
+                <p style="margin-top: 1rem;"><strong>Hours:</strong><br>Sunday – Thursday<br>9:00 AM – 6:00 PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2021 – 2024 RAA International Trading FZC LLC. All rights reserved. | Privacy Policy | Terms of
+                Service</p>
+            <p style="margin-top: 0.8rem; font-size: 0.85rem;">Delivering Innovation in Technology and Design</p>
+        </div>
+    </footer>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script>
+        // ── Mobile Menu ──
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navLinksEl = document.getElementById('navLinks');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            navLinksEl.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => navLinksEl.classList.remove('active'));
+        });
+
+        // ── Active Link ──
+        function setActiveLink() {
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === currentPage) link.classList.add('active');
+            });
+        }
+        setActiveLink();
+
+        // ── Scroll Reveal ──
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.08, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        // ── FAQ Accordion ──
+        function toggleFaq(el) {
+            const item = el.parentElement;
+            const wasOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(f => f.classList.remove('open'));
+            if (!wasOpen) item.classList.add('open');
+        }
+
+        // ── Contact Form Handling ──
+        const contactForm = document.getElementById('contactForm');
+        const formMessage = document.getElementById('formMessage');
+
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !email || !phone || !subject || !message) {
+                showMessage('Please fill in all required fields.', 'error');
+                return;
+            }
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                showMessage('Please enter a valid email address.', 'error');
+                return;
+            }
+
+            showMessage('Thank you for your inquiry! Our team will contact you within 24 hours.', 'success');
+            contactForm.reset();
+
+            console.log({
+                name: name,
+                email: email,
+                phone: phone,
+                company: document.getElementById('company').value,
+                subject: subject,
+                message: message,
+                subscribe: document.querySelector('input[name="subscribe"]').checked,
+                timestamp: new Date().toISOString()
+            });
+        });
+
+        function showMessage(text, type) {
+            formMessage.textContent = text;
+            formMessage.style.display = 'block';
+            formMessage.style.borderRadius = '10px';
+            formMessage.style.backgroundColor = type === 'success' ? '#d4edda' : '#f8d7da';
+            formMessage.style.color = type === 'success' ? '#155724' : '#721c24';
+            formMessage.style.borderLeft = '4px solid ' + (type === 'success' ? '#28a745' : '#dc3545');
+
+            setTimeout(() => {
+                formMessage.style.display = 'none';
+            }, 5000);
+        }
+
+        // Smooth scroll to form on anchor click
+        document.querySelectorAll('a[href="#contactForm"]').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.getElementById('contactForm').scrollIntoView({ behavior: 'smooth' });
+                document.getElementById('name').focus();
+            });
+        });
+    </script>
+</body>
+
+</html>
