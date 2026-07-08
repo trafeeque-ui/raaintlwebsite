@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="RAA International Trading FZC LLC - Leading provider of IT hardware, software solutions, connectivity products, and premium accessories in the UAE.">
+    <meta name="keywords" content="IT products, HDMI cables, software development, connectivity solutions, UAE">
+    <meta name="author" content="RAA International Trading FZC LLC">
+    <title>RAA International Trading - IT Products & Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- ==================== HEADER & NAVIGATION ==================== -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/RA_New.png" alt="RAA International" style="width: 30%;cursor: pointer;"
+                    href="index.html" title="RAA International Trading FZC LLC">
+
+                <span class="logo-text">RAA International FZC LLC</span>
+            </div>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="solutions.html">Solutions</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ==================== HERO CAROUSEL SECTION ==================== -->
+    <section class="hero-carousel" id="heroCarousel">
+        <div class="carousel-slides">
+            <!-- Slide 1: IT Hardware -->
+            <!-- Slide 1: IT Hardware -->
+            <div class="carousel-slide active">
+                <img src="images/ITH11.png" alt="IT Hardware" class="slide-img">
+                <div class="slide-overlay slide-overlay--right">
+                    <div class="slide-content">
+                        <h1>Delivering Innovation in Technology and Design</h1>
+                        <p>Premium IT Hardware & Networking Solutions for Modern Businesses</p>
+                        <a href="products.html" class="cta-button">Explore Hardware</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2: Software Solutions -->
+            <div class="carousel-slide">
+                <img src="images/Software_V9.png" alt="Software Solutions" class="slide-img">
+                <div class="slide-overlay slide-overlay--left1">
+                    <div class="slide-content">
+                        <h1>Smart Software for Smarter Business</h1>
+                        <p>Custom Development, Dashboards & Enterprise Solutions</p>
+                        <a href="solutions.html" class="cta-button">View Solutions</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: RAA Connect+ HDMI -->
+            <div class="carousel-slide">
+                <img src="images/hdmi7.png" alt="HDMI Cables" class="slide-img">
+                <div class="slide-overlay slide-overlay--right">
+                    <div class="slide-content">
+                        <h1>One Connection - Seamless Performance</h1>
+                        <p>Premium HDMI 2.1 Cables for 8K Ultra HD & Professional Use</p>
+                        <a href="products.html" class="cta-button">Discover HDMI</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Lifestyle Products -->
+            <div class="carousel-slide">
+                <img src="images/lifestyle_v4.png" alt="Lifestyle Products" class="slide-img">
+                <div class="slide-overlay slide-overlay--left1">
+                    <div class="slide-content">
+                        <h1>Lifestyle Technology Products</h1>
+                        <p>Premium Leather Goods & Accessories for Modern Work</p>
+                        <a href="products.html" class="cta-button">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <button class="carousel-nav prev" onclick="moveSlide(-1)">❮</button>
+        <button class="carousel-nav next" onclick="moveSlide(1)">❯</button>
+
+        <!-- Dots Navigation -->
+        <div class="carousel-controls">
+            <span class="carousel-dot active" onclick="currentSlide(0)"></span>
+            <span class="carousel-dot" onclick="currentSlide(1)"></span>
+            <span class="carousel-dot" onclick="currentSlide(2)"></span>
+            <span class="carousel-dot" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT US SECTION ==================== -->
+    <!-- <section class="about-section">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="images/AboutUs_1.png" alt="RAA International Trading" class="about-img">
+            </div>
+            <div class="about-content">
+                <div class="about-tagline">
+                    <h2 class="tagline-main">Driven by Trust</h2>
+                    <p class="tagline-sub">4 Years of Excellence</p>
+                </div>
+
+                <h3>About RAA International</h3>
+                <p class="about-intro">Delivering Innovation in Technology and Design</p>
+
+                <div class="about-overview">
+                    <p>Established in 2021, RAA International Trading FZC LLC is a UAE-based trading company operating
+                        across technology and consumer product segments. We are committed to excellence, innovation, and
+                        customer satisfaction across all our business verticals.</p>
+                </div>
+
+                <div class="business-verticals">
+                    <h4>Our Business Divisions</h4>
+                    <div class="verticals-list">
+                        <div class="vertical-item">
+                            <span class="vertical-icon">🔌</span>
+                            <div class="vertical-details">
+                                <h5>RAA Connect+</h5>
+                                <p>Premium Connectivity & IT Products</p>
+                            </div>
+                        </div>
+                        <div class="vertical-item">
+                            <span class="vertical-icon">💻</span>
+                            <div class="vertical-details">
+                                <h5>Technology Solutions</h5>
+                                <p>IT Hardware, Software & Custom Development</p>
+                            </div>
+                        </div>
+                        <div class="vertical-item">
+                            <span class="vertical-icon">👜</span>
+                            <div class="vertical-details">
+                                <h5>Lifestyle Products</h5>
+                                <p>Premium Leather Goods & Accessories</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="about.html" class="cta-button about-button">Learn More About Us</a>
+            </div>
+        </div>
+    </section> -->
+
+
+    <!-- <section class="about-section-new">
+    <div class="about-wrapper">
+
+ 
+        <div class="about-left">
+            <div class="about-mini-line">
+                <span class="line"></span>
+                <span class="text">Driven by Innovation</span>
+            </div>
+
+            <h1 class="about-title">
+                Built for the Future
+            </h1>
+
+            <p>
+                Founded in 2021, RAA International Trading FZC LLC began with a clear vision —
+                to deliver reliable, accessible, and innovative technology solutions.
+            </p>
+
+            <p>
+                Today, we are a growing name in IT hardware, software, and connectivity products
+                across the UAE. Our commitment remains simple — deliver quality, build trust,
+                and stay ahead of innovation.
+            </p>
+
+            <a href="#" class="about-btn">ABOUT US</a>
+        </div>
+
+    </div>
+</section> -->
+
+
+    <section class="about-clean">
+
+        <div class="about-container">
+
+            <div class="about-content">
+
+                <div class="about-mini-line">
+                    <span class="line"></span>
+                    <span class="text">Driven by Innovation</span>
+                </div>
+
+                <h1 class="about-title">
+                    Built for the Future
+                </h1>
+
+                <p>
+                    Founded in 2021, RAA International Trading FZC LLC began with a clear vision —
+                    to deliver reliable, accessible, and innovative technology solutions.
+                </p>
+
+                <p>
+                    Today, we are a growing name in IT hardware, software, and connectivity products
+                    across the UAE. Our commitment remains simple — deliver quality, build trust,
+                    and stay ahead of innovation.
+                </p>
+                <p>
+                    Our business spans a focused ecosystem of solutions, including IT hardware and software,
+                    custom software development, high-performance connectivity products such as HDMI 8K solutions,
+                    and thoughtfully designed lifestyle accessories. Each vertical is driven by the same foundation
+                    of quality, reliability, and innovation, enabling us to serve both business and individual
+                    needs through a unified approach.
+                </p>
+
+                <a href="about.html" class="about-btn">ABOUT US</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==================== SERVICES OVERVIEW ==================== -->
+    <section class="light-bg">
+        <div class="section-title">
+            <h2>Our Core Solutions</h2>
+        </div>
+
+        <div class="card-grid">
+
+            <div class="card fade-in">
+
+                <div class="card-icon">
+                    <img src="images/server.ico" style="width: 20%;" alt="Server" title="Server"></img>
+                </div>
+                <h3>IT Hardware & Software</h3>
+                <p>
+                    Enterprise-grade IT infrastructure, including servers, workstations, laptops, and licensed software
+                    from globally trusted brands, ensuring performance, reliability, and scalability.
+                </p>
+                <a href="products.html" class="highlight">Explore Portfolio →</a>
+            </div>
+
+            <div class="card fade-in">
+                <div class="card-icon">
+                    <img src="images/dashboard.ico" style="width: 20%;" alt="Dashboard" title="Dashboard"></img>
+                </div>
+                <h3>Digital Solutions</h3>
+                <p>
+                    Custom software development, web and mobile applications, and advanced business dashboards designed
+                    to
+                    accelerate digital transformation and enhance operational efficiency.
+                </p>
+                <a href="solutions.html" class="highlight">Discover Solutions →</a>
+            </div>
+
+            <div class="card fade-in">
+                <div class="card-icon">
+                    <img src="images/hdmi1.ico" style="width: 20%;" alt="HDMI" title="HDMI"></img>
+                </div>
+                <h3>Connectivity Solutions</h3>
+                <p>
+                    High-performance connectivity products, including HDMI 8K solutions, engineered for seamless data
+                    transmission, superior clarity, and dependable performance across applications.
+                </p>
+                <a href="products.html" class="highlight">View Products →</a>
+            </div>
+
+            <div class="card fade-in">
+                <div class="card-icon">
+                    <img src="images/LifeStyle.ico" style="width: 20%;" alt="Lifestyle Accessories"
+                        title="Lifestyle Accessories"></img>
+                </div>
+                <h3>Lifestyle Accessories</h3>
+                <p>
+                    Premium lifestyle accessories thoughtfully designed to complement modern work and digital
+                    environments,
+                    combining functionality, durability, and refined aesthetics.
+                </p>
+                <a href="products.html" class="highlight">Explore Collection →</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="brands-section">
+        <div class="section-title">
+            <h2>Powered by Leading Brands</h2>
+        </div>
+
+        <div class="brands-carousel">
+
+            <button class="brand-nav prev">&#10094;</button>
+
+            <div class="brands-wrapper">
+                <div class="brands-track">
+
+                    <div class="brand-card"><img src="images/brands/hp.png" alt="HP" title="HP"></div>
+                    <div class="brand-card"><img src="images/brands/dell.png" alt="Dell" title="Dell"></div>
+                    <div class="brand-card"><img src="images/brands/lenovo.png" alt="Lenovo" title="Lenovo"></div>
+                    <div class="brand-card"><img src="images/brands/zotac.png" alt="Zotac" title="Zotac"></div>
+                    <div class="brand-card"><img src="images/brands/crucial.png" alt="Crucial" title="Crucial"></div>
+                    <div class="brand-card"><img src="images/brands/acer.png" alt="Acer" title="Acer"></div>
+                    <div class="brand-card"><img src="images/brands/intel.png" alt="Intel" title="Intel"></div>
+                    <div class="brand-card"><img src="images/brands/benq.png" alt="BenQ" title="BenQ"></div>
+                    <div class="brand-card"><img src="images/brands/apc.png" alt="APC" title="APC"></div>
+                    <div class="brand-card"><img src="images/brands/logitech.png" alt="Logitech" title="Logitech"></div>
+                    <div class="brand-card"><img src="images/brands/RAA_V1.png" alt="RAA" title="RAA"></div>
+                    <div class="brand-card"><img src="images/brands/nvidia.png" alt="NVIDIA" title="NVIDIA"></div>
+                    <div class="brand-card"><img src="images/brands/aruba.png" alt="Aruba" title="Aruba"></div>
+                    <div class="brand-card"><img src="images/brands/samsung.png" alt="Samsung" title="Samsung"></div>
+                    <div class="brand-card"><img src="images/brands/wd_v3.png" alt="WD" title="WD"></div>
+                    <div class="brand-card"><img src="images/brands/lg.png" alt="LG" title="LG"></div>
+                    <div class="brand-card"><img src="images/brands/adobe.png" alt="Adobe" title="Adobe"></div>
+                    <div class="brand-card"><img src="images/brands/asus.png" alt="ASUS" title="ASUS"></div>
+                    <div class="brand-card"><img src="images/brands/linksys.png" alt="Linksys" title="Linksys"></div>
+
+                </div>
+            </div>
+
+            <button class="brand-nav next">&#10095;</button>
+
+        </div>
+    </section>
+
+    <!-- ==================== WHY CHOOSE US ==================== -->
+    <!-- <section>
+        <div class="section-title">
+            <h2>Why Choose RAA International?</h2>
+        </div>
+        <div class="features-grid">
+            <div class="feature-item">
+                <h5>⭐ RAA Connect+ - Our Signature Connectivity Brand</h5>
+                <p>Premium HDMI solutions with guaranteed performance and reliability for all applications.</p>
+            </div>
+            <div class="feature-item">
+                <h5>🌍 Trusted Global Partners</h5>
+                <p>Genuine products from verified manufacturers ensuring quality and authenticity.</p>
+            </div>
+            <div class="feature-item">
+                <h5>💰 Competitive Pricing</h5>
+                <p>Best market rates with dependable supply and flexible payment options.</p>
+            </div>
+            <div class="feature-item">
+                <h5>🏢 UAE-Based Support</h5>
+                <p>Local operations with responsive, multilingual customer support team.</p>
+            </div>
+            <div class="feature-item">
+                <h5>🤝 Partnership Approach</h5>
+                <p>Long-term relationships with SMEs, corporates, integrators, and retailers.</p>
+            </div>
+            <div class="feature-item">
+                <h5>🎯 Customer-Centric</h5>
+                <p>Solutions tailored to your specific requirements and business goals.</p>
+            </div>
+        </div>
+    </section> -->
+
+
+    <section class="wcu">
+        <div class="wcu-head">
+            <p class="wcu-eyebrow">Our Promise</p>
+            <h2 class="wcu-h2">Why Choose RAA?</h2>
+            <div class="wcu-bar"></div>
+        </div>
+
+        <div class="hex-wrap">
+            <div class="hex-row">
+                <div class="hex">
+                    <div class="hex-icon">⭐</div>
+                    <div class="hex-title">RAA Connect+<br>Signature Brand</div>
+                    <div class="hex-sub">Premium HDMI &amp; connectivity for every use</div>
+                </div>
+                <div class="hex light">
+                    <div class="hex-icon">🌍</div>
+                    <div class="hex-title">Trusted Global<br>Partners</div>
+                    <div class="hex-sub">Verified manufacturers &amp; genuine products</div>
+                </div>
+                <div class="hex">
+                    <div class="hex-icon">💰</div>
+                    <div class="hex-title">Competitive<br>Pricing</div>
+                    <div class="hex-sub">Best rates with flexible payment options</div>
+                </div>
+
+            </div>
+            <div class="hex-row offset">
+                <div class="hex light">
+                    <div class="hex-icon">🏢</div>
+                    <div class="hex-title">UAE-Based<br>Support</div>
+                    <div class="hex-sub">Local, responsive multilingual team</div>
+                </div>
+                <div class="hex">
+                    <div class="hex-icon">🤝</div>
+                    <div class="hex-title">Partnership<br>Approach</div>
+                    <div class="hex-sub">SMEs, corporates, integrators &amp; retailers</div>
+                </div>
+                <div class="hex light">
+                    <div class="hex-icon">🎯</div>
+                    <div class="hex-title">Customer-Centric<br>Solutions</div>
+                    <div class="hex-sub">Tailored to your goals &amp; requirements</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ==================== FEATURED PRODUCTS ==================== -->
+    <!-- <section class="light-bg">
+        <div class="section-title">
+            <h2>Featured Product Categories</h2>
+        </div>
+        <div class="card-grid">
+            <div class="card">
+                <div class="card-icon">🖥️</div>
+                <h3>IT Hardware</h3>
+                <p>Servers, workstations, laptops, monitors, components, and networking products from leading brands.
+                </p>
+            </div>
+            <div class="card">
+                <div class="card-icon">📀</div>
+                <h3>Software Solutions</h3>
+                <p>Operating systems, Microsoft Office, antivirus security, and specialized server software.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🎬</div>
+                <h3>RAA Connect+ HDMI</h3>
+                <p>Premium HDMI 2.1 cables for home entertainment, gaming, corporate AV, and digital signage.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">👜</div>
+                <h3>Premium Accessories</h3>
+                <p>Quality leather goods including laptop bags, wallets, belts, and designer accessories.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">⚙️</div>
+                <h3>Software Development</h3>
+                <p>Custom web and mobile applications designed for scalability, security, and user experience.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">📈</div>
+                <h3>Dashboard Solutions</h3>
+                <p>Business dashboards, KPI tracking, real-time data visualization, and performance monitoring.</p>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- ==================== COMPANY STATS ==================== -->
+    <!-- <section>
+        <div class="section-title">
+            <h2>Trusted by Businesses Across UAE</h2>
+        </div>
+
+        <div class="features-grid">
+
+            <div class="feature-item text-center">
+                <div class="feature-icon">🏢</div>
+                <h4 class="stat-heading">Established in 2021</h4>
+                <p>Building strong partnerships and delivering excellence</p>
+            </div>
+
+            <div class="feature-item text-center">
+                <div class="feature-icon">⚙️</div>
+                <h4 class="stat-heading">Diverse Solution Portfolio</h4>
+                <p>Technology, Connectivity, and Lifestyle Solutions</p>
+            </div>
+
+            <div class="feature-item text-center">
+                <div class="feature-icon">🌍</div>
+                <h4 class="stat-heading">Global Reach</h4>
+                <p>Trusted manufacturers and international partnerships</p>
+            </div>
+
+        </div>
+    </section> -->
+
+
+    <section class="trust-section">
+
+        <!-- Heading -->
+        <div class="trust-heading">
+            <span class="eyebrow">Our Foundation</span>
+            <h2>Trusted by Businesses<br>Across <em>UAE</em></h2>
+            <div class="divider"></div>
+        </div>
+
+        <!-- Three Pillars -->
+        <div class="pillars">
+
+            <!-- Pillar 1 -->
+            <div class="pillar">
+                <div class="pillar-icon-wrap">
+                    <svg class="ring" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="34" cy="34" r="32" stroke="#C9A96E" stroke-width="0.5" stroke-dasharray="4 6"
+                            stroke-linecap="round" opacity="0.5" />
+                    </svg>
+                    <span class="pillar-emoji">🏢</span>
+                </div>
+                <h4 class="pillar-title">Established<br>in 2021</h4>
+                <p class="pillar-body">Building strong partnerships and delivering excellence since our founding.</p>
+                <span class="pillar-dot"></span>
+            </div>
+
+            <div class="sep"></div>
+
+            <!-- Pillar 2 -->
+            <div class="pillar">
+                <div class="pillar-icon-wrap">
+                    <svg class="ring" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="34" cy="34" r="32" stroke="#C9A96E" stroke-width="0.5" stroke-dasharray="2 8"
+                            stroke-linecap="round" opacity="0.5" />
+                    </svg>
+                    <span class="pillar-emoji">⚙️</span>
+                </div>
+                <h4 class="pillar-title">Diverse Solution<br>Portfolio</h4>
+                <p class="pillar-body">Technology, Connectivity, and Lifestyle Solutions under one roof.</p>
+                <span class="pillar-dot"></span>
+            </div>
+
+            <div class="sep"></div>
+
+            <!-- Pillar 3 -->
+            <div class="pillar">
+                <div class="pillar-icon-wrap">
+                    <svg class="ring" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="34" cy="34" r="32" stroke="#C9A96E" stroke-width="0.5" stroke-dasharray="6 4"
+                            stroke-linecap="round" opacity="0.5" />
+                    </svg>
+                    <span class="pillar-emoji">🌍</span>
+                </div>
+                <h4 class="pillar-title">Global<br>Reach</h4>
+                <p class="pillar-body">Trusted manufacturers and international partnerships spanning continents.</p>
+                <span class="pillar-dot"></span>
+            </div>
+
+        </div>
+
+
+
+    </section>
+
+
+    <!-- ==================== CALL TO ACTION ==================== -->
+    <!-- <section class="hero" style="background: linear-gradient(135deg, #0052A3 0%, #003D82 100%); padding: 3rem 5%;">
+        <div class="hero-content">
+            <h2 style="color: var(--white);">Ready to Transform Your Business?</h2>
+            <p>Contact our team for enterprise solutions, product inquiries, or partnership opportunities.</p>
+            <a href="contact.html" class="cta-button">Contact Us Today</a>
+            <a href="solutions.html" class="cta-button cta-button-secondary">View Our Solutions</a>
+        </div>
+    </section> -->
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>RAA International Trading FZC LLC</h4>
+                <p>Established in 2021 as a UAE-based trading company specializing in IT products, connectivity
+                    solutions, and premium accessories.</p>
+
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a><br>
+                <a href="about.html">About Us</a><br>
+                <a href="products.html">Products</a><br>
+                <a href="solutions.html">Solutions</a><br>
+                <a href="contact.html">Contact Us</a><br>
+            </div>
+
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <p>📧 Email: <a href="mailto:info@raaintl.com">info@raaintl.com</a></p>
+                <p>📱 WhatsApp: <a href="https://www.raaintl.com/971503212721">Chat with us</a></p>
+                <p>📍 Location: UAE</p>
+                <p style="margin-top: 1rem;"><strong>Hours:</strong><br>Sunday - Thursday<br>9:00 AM - 6:00 PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            2021 - 2024 RAA International Trading FZC LLC. All rights reserved. | Privacy Policy | Terms of
+            Service
+            <p style="margin-top: 1rem; font-size: 0.85rem;">Delivering Innovation in Technology and Design</p>
+        </div>
+    </footer>
+
+    <!-- ==================== CAROUSEL & MOBILE MENU SCRIPT ==================== -->
+    <script>
+        // ==================== CAROUSEL FUNCTIONALITY ====================
+        let currentSlideIndex = 0;
+        const slideCount = 4;
+        let autoSlideInterval;
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.carousel-slide');
+            const dots = document.querySelectorAll('.carousel-dot');
+
+            if (index >= slideCount) {
+                currentSlideIndex = 0;
+            } else if (index < 0) {
+                currentSlideIndex = slideCount - 1;
+            } else {
+                currentSlideIndex = index;
+            }
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            slides[currentSlideIndex].classList.add('active');
+            dots[currentSlideIndex].classList.add('active');
+        }
+
+        function moveSlide(n) {
+            clearInterval(autoSlideInterval);
+            showSlide(currentSlideIndex + n);
+            startAutoSlide();
+        }
+
+        function currentSlide(n) {
+            clearInterval(autoSlideInterval);
+            showSlide(n);
+            startAutoSlide();
+        }
+
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(() => {
+                showSlide(currentSlideIndex + 1);
+            }, 10000);
+        }
+
+        // Start carousel on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            startAutoSlide();
+        });
+
+        // ==================== MOBILE MENU FUNCTIONALITY ====================
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Set active link based on current page
+        function setActiveLink() {
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === currentPage || (currentPage === '' && link.getAttribute('href') === 'index.html')) {
+                    link.classList.add('active');
+                }
+            });
+        }
+        setActiveLink();
+
+        // ==================== SCROLL FADE-IN ANIMATION ====================
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card, .feature-item').forEach(element => {
+            observer.observe(element);
+        });
+
+
+        let brandIndex = 0;
+        const track = document.querySelector(".brands-track");
+        const cards = document.querySelectorAll(".brand-card");
+
+        const cardWidth = 200; // width + margin
+        const visibleCards = Math.floor(document.querySelector(".brands-wrapper").offsetWidth / cardWidth);
+
+        function moveBrands(step) {
+            brandIndex += step;
+
+            if (brandIndex < 0) brandIndex = 0;
+            if (brandIndex > cards.length - visibleCards) {
+                brandIndex = 0; // loop back
+            }
+
+            track.style.transform = `translateX(-${brandIndex * cardWidth}px)`;
+        }
+
+        // Buttons
+        document.querySelector(".brand-nav.next").onclick = () => moveBrands(1);
+        document.querySelector(".brand-nav.prev").onclick = () => moveBrands(-1);
+
+        // AUTO SCROLL (one by one)
+        setInterval(() => {
+            moveBrands(1);
+        }, 2500);
+
+
+
+        const counters = document.querySelectorAll(".counter");
+
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute("data-target");
+                const count = +counter.innerText;
+
+                const increment = target / 100;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(updateCount, 20);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+
+            updateCount();
+        });
+    </script>
+</body>
+
+</html>
