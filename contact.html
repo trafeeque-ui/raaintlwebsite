@@ -38,20 +38,29 @@
             width: 100vw;
             left: 50%;
             margin-left: -50vw;
-            padding: 7rem 5% 8rem;
+            height: 480px;
             overflow: hidden;
-            background: linear-gradient(160deg, #000c1a 0%, #002055 55%, #003D82 100%);
-            text-align: center;
+            background: #000c1a;
         }
 
-        .con-hero::before {
-            content: "";
+        .con-hero-bg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            opacity: 0.55;
+            display: block;
+        }
+
+        .con-hero-overlay {
             position: absolute;
             inset: 0;
-            background-image:
-                radial-gradient(circle at 15% 20%, rgba(201, 169, 110, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at 85% 80%, rgba(0, 102, 204, 0.25) 0%, transparent 45%);
-            pointer-events: none;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 5%;
         }
 
         .con-hero-content {
@@ -109,7 +118,7 @@
             width: 100%;
             height: 120px;
             background: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.9) 80%, #fff 100%);
-            z-index: 1;
+            z-index: 5;
             pointer-events: none;
         }
 
@@ -447,11 +456,19 @@
             .why-grid {
                 grid-template-columns: 1fr 1fr;
             }
+
+            .con-hero {
+                height: 420px;
+            }
         }
 
         @media (max-width: 480px) {
             .why-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .con-hero {
+                height: 380px;
             }
         }
 
@@ -525,11 +542,14 @@
 
     <!-- ==================== HERO ==================== -->
     <div class="con-hero">
-        <div class="con-hero-content">
-            <div class="con-hero-eyebrow">Get In Touch</div>
-            <h1>Let's Start a <em>Conversation</em></h1>
-            <p>Reach out for product inquiries, quotations, or partnership opportunities — our team is ready to
-                help.</p>
+        <img src="images/About_Us_V10.png" alt="Contact RAA International" class="con-hero-bg">
+        <div class="con-hero-overlay">
+            <div class="con-hero-content">
+                <div class="con-hero-eyebrow">Get In Touch</div>
+                <h1>Let's Start a <em>Conversation</em></h1>
+                <p>Reach out for product inquiries, quotations, or partnership opportunities — our team is ready to
+                    help.</p>
+            </div>
         </div>
     </div>
 
@@ -556,8 +576,8 @@
                 <h3>WhatsApp</h3>
                 <p class="con-info-main">Chat with us directly</p>
                 <p class="con-info-sub">Quick response and instant support</p>
-                <a href="https://wa.me/971503212721" class="cta-button"
-                    style="display: inline-block; margin: 0;">Chat on WhatsApp</a>
+                <a href="https://wa.me/971503212721" class="cta-button" style="display: inline-block; margin: 0;">Chat
+                    on WhatsApp</a>
             </div>
             <div class="con-info-card reveal">
                 <div class="con-info-icon">🕐</div>
@@ -617,8 +637,8 @@
 
                     <div class="form-group full">
                         <label for="message">Message *</label>
-                        <textarea id="message" name="message" placeholder="Please describe your inquiry or requirements..."
-                            required></textarea>
+                        <textarea id="message" name="message"
+                            placeholder="Please describe your inquiry or requirements..." required></textarea>
                     </div>
 
                     <div class="form-group full">
